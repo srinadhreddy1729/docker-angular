@@ -1,0 +1,4 @@
+<input type="email" [(ngModel)]="emailData.to" name="to" placeholder="Recipient email">
+<input type="text" [(ngModel)]="emailData.subject" name="subject" placeholder="Subject">
+<textarea [(ngModel)]="emailData.text" name="text" placeholder="Message"></textarea>
+<button (click)="sendEmail()">Send Email</button>

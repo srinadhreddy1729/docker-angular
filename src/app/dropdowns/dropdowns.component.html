@@ -1,0 +1,98 @@
+<div class="parent-frame">
+<div class="data-f1-1">
+  <div class="card">
+    <div class="card-content">
+      <div class="card-header">
+        <div class="galaxy-background1"></div>
+
+        <h2>STANDARD STAR GIFT PACK</h2>
+        <p class="price"><span class="original-price">₹5,386.70</span> ₹3,726.70</p>
+        <p class="offer">Limited Offer: One Free Gift Included</p>
+      </div>
+      <div class="card-body">
+        <p>This package allows you to name a star that is visible in your area.</p>
+        <ul *ngFor="let name3 of nameOption3;let i=index">
+          <!-- <li>Free Gift - Star Map</li>
+          <li>Lifetime registry record</li>
+          <li>Visible from your location</li>
+          <li>Registration certificate</li>
+          <li>Gift Folder</li>
+          <li>Electronic files included</li> -->
+          <li>{{name3.key}}</li>
+          <span *ngIf="i>=nameOption3.length-2">
+            </span>
+        </ul>
+      </div>
+      <div class="card-footer">
+        <button class="order-button btn" routerLink="/star-registration">ORDER NOW</button>
+        <p class="delivery">ESTIMATED DELIVERY: FEB 2</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+<div class="data-f1-2">
+  <div class="card">
+    <div class="card-content">
+      <div class="card-header">
+        <div class="galaxy-background2"></div>
+
+        <h2>CONSTELLATION STAR</h2>
+        <p class="price"><span class="original-price">₹7,876.70</span> ₹5,513.69</p>
+        <p class="offer">Limited Offer: One Free Gift Included</p>
+      </div>
+      <div class="card-body">
+        <p>This package allows you to name a star that is visible in your area.</p>
+        <ul *ngFor="let name1 of nameOption1">
+          <!-- <li>Free Gift - Star Map</li>
+          <li>Lifetime registry record</li>
+          <li>Visible from your location</li>
+          <li>Registration certificate</li>
+          <li>Gift Folder</li>
+          <li>Electronic files included</li>
+          <li>{{aa}}</li> -->
+          <li>{{name1.key}}</li>
+        </ul> 
+      </div>
+      <div class="card-footer">
+        <button class="order-button btn" routerLink="/star-registration">ORDER NOW</button>
+        <p class="delivery">ESTIMATED DELIVERY: FEB 2</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+<div class="data-f1-3">
+  <div class="card">
+    <div class="card-content">
+      <div class="card-header">
+        <div class="galaxy-background3"></div>
+
+        <h2>BINARY STAR GIFT PACK</h2>
+        <p class="price"><span class="original-price">₹9,545.00</span> ₹6681.50</p>
+        <p class="offer">Limited Offer: One Free Gift Included</p>
+      </div>
+ <div class="card-body">
+        <p>This package allows you to name a star that is visible in your area.</p>
+        <!-- <ul>
+          <li>Free Gift - Star Map</li>
+          <li>Lifetime registry record</li>
+          <li>Visible from your location</li>
+          <li>Registration certificate</li>
+          <li>Gift Folder</li>
+          <li>Electronic files included</li>
+        </ul> -->
+        <ul *ngFor="let name2 of nameOption2">
+          <li>{{name2.key}}</li>
+</ul>
+      </div>
+      <div class="card-footer">
+        <button class="order-button btn" routerLink="/star-registration">ORDER NOW</button>
+        <p class="delivery">ESTIMATED DELIVERY: FEB 2</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</div>

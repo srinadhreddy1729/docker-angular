@@ -1,0 +1,9 @@
+<form [formGroup]="negForm">
+  name:<input type="text" class="form-control M-3 w-50" formControlName="uname">
+  email:<input type="text" class="form-control M-3 w-50" formControlName="email">
+  <button class="btn btn-danger M-5 ">submit</button>
+  <div *ngIf="negForm.get('uname')!.hasError('required') && negForm.get('uname')!.touched" style="color:red;font-size:5rem;">
+    username is required
+
+  </div>
+</form>

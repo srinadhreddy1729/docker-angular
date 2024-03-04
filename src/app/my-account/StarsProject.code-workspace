@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "../../../.."
+		},
+		{
+			"path": "../../../../../nodejsexamples"
+		},
+		{
+			"path": "../../../../../bommanasolutions"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "nodejsexamples"
+	}
+}

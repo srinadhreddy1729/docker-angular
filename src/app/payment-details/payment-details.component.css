@@ -1,0 +1,61 @@
+
+input.ng-touched.ng-invalid
+{
+  border: 2px solid red;
+}
+input.ng-touched.ng-valid
+{
+  border:2px solid green;
+}
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start; 
+  margin-top:3rem;
+  margin-left: 1rem;
+}
+
+.card1 {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  padding: 20px;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  background-color: antiquewhite;
+}
+
+.card1 img {
+  width: 80px;
+  height: 80px;
+  margin-right: 20px;
+}
+
+.card-content {
+  font-size: 18px;
+  color: #333;
+}
+
+.card-content h3 {
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-content p {
+  margin: 5px 0;
+}
+
+.data {
+  margin-top: 2rem; 
+  margin-left: 24rem;
+}
+
+@media (max-width: 768px) {
+  .cards {
+    justify-content: center; 
+  }
+
+  .data {
+    margin-top: 0; 
+    margin-left: 0; 
+  }
+}

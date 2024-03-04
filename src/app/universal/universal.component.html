@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Star Map with Dynamic IDs</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      background-color: black;
+      color: white;
+    }
+
+    .celestial-body {
+      position: absolute;
+      border-radius: 50%;
+    }
+
+    .star {
+      width: 4px;
+      height: 4px;
+      background-color: rgba(255, 255, 255, 0.8); 
+    }
+
+    .planet-medium {
+      width: 12px;
+      height: 12px;
+      background-color: #ffcc00; 
+    }
+
+    .planet-large {
+      width: 16px;
+      height: 16px;
+      background-color: #ff9900;
+    }
+
+    .comet {
+      width: 20px;
+      height: 10px;
+      background-color: #ff6600; 
+      clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
+    }
+
+    .celestial-label {
+      position: absolute;
+      text-align: center;
+      font-size: 10px;
+    }
+
+    .input-group {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      display: flex;
+      flex-direction: column;
+    }
+  </style>
+</head>
+<body>
+
+<div class="input-group">
+  <input type="text" id="starIdInput" placeholder="Enter Star ID">
+  <button onclick="submitStarId()">Submit</button>
+</div>
+
+<script>
+  // Function to generate random coordinates
+  function getRandomPosition() {
+    const x = Math.random() * window.innerWidth;
+    const y = Math.random() * window.innerHeight;
+    return { x, y };
+  }
+
+  // Function to create celestial bodies with labels on the page
+  function createCelestialBodies() {
+    const numStars = 5; // Adjust the number of stars as needed
+    const celestialBodies = [
+      { type: "star", size: "small", color: "rgba(255, 255, 255, 0.8)", name: "Alpha Centauri" },
+      { type: "star", size: "small", color: "rgba(255, 255, 255, 0.8)", name: "Sirius" },
+      { type: "star", size: "small", color: "rgba(255, 255, 255, 0.8)", name: "Betelgeuse" },
+      { type: "planet-medium", size: "medium", color: "#ffcc00", name: "Plutoo" },
+      { type: "planet-medium", size: "medium", color: "#ff9900", name: "Gupitor" },
+      // Add more celestial bodies as needed
+    ];
+
+    const body = document.body;
+    const inputGroup = document.querySelector('.input-group');
+
+    for (let i = 0; i < 1000; i++) {
+      const star = document.createElement("div");
+      star.className = "celestial-body star";
+      star.id = `star${i + 1}`; // Dynamic ID assignment
+
+      const position = getRandomPosition();
+      star.style.left = `${position.x}px`;
+      star.style.top = `${position.y}px`;
+
+      star.addEventListener('click', () => showStarDetails(star.id)); // Event listener for click
+
+      body.appendChild(star);
+
+      // Create an input for each star
+      const input = document.createElement("input");
+      input.type = "text";
+      input.id = `input${i + 1}`;
+      input.placeholder = `Input for Star ${i + 1}`;
+      inputGroup.appendChild(input);
+    }
+
+    celestialBodies.forEach(bodyInfo => {
+      const celestialBody = document.createElement("div");
+      celestialBody.className = `celestial-body ${bodyInfo.type}`;
+      celestialBody.style.backgroundColor = bodyInfo.color;
+
+      const position = getRandomPosition();
+      celestialBody.style.left = `${position.x}px`;
+      celestialBody.style.top = `${position.y}px`;
+
+      const label = document.createElement("div");
+      label.className = "celestial-label";
+      label.textContent = bodyInfo.name;
+      celestialBody.appendChild(label);
+
+      body.appendChild(celestialBody);
+    });
+
+    // Function to handle the submit button click
+    window.submitStarId = function () {
+      const starIdInput = document.getElementById("starIdInput").value;
+      showStarDetails(starIdInput);
+    };
+  }
+
+  // Function to show star details
+  window.showStarDetails = function(starId) {
+    const star = document.getElementById(starId);
+    const degrees = calculateDegrees(star.style.left, star.style.top);
+
+    alert(`Star ID: ${starId}\nDegrees: ${degrees}`);
+  };
+
+  // Function to calculate degrees
+  function calculateDegrees(left, top) {
+    const centerX = window.innerWidth / 2;
+    const centerY = window.innerHeight / 2;
+
+    const radians = Math.atan2(centerY - parseInt(top), parseInt(left) - centerX);
+    let degrees = radians * (180 / Math.PI);
+    degrees = degrees < 0 ? 360 + degrees : degrees;
+
+    return degrees.toFixed(2);
+  }
+
+  // Create celestial bodies when the window loads
+  window.onload = createCelestialBodies;
+</script>
+
+</body>
+</html>

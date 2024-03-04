@@ -1,0 +1,81 @@
+ 
+   <div class="database-1">
+    <div class="gallery">
+      <div *ngFor="let imageData of imageData" class="image-container" >
+        <img [src]="imageData.src" alt="Image" class="data" 
+             [class.selected]="clickedImageSrc === imageData.src" (click)="showImage(imageData)">
+      </div>
+    </div>
+  </div>
+  
+  
+
+
+
+
+    <div class="container">
+    <div class="content">
+      <div class="row">
+        <div class="col-12 col-md-6">
+          <div class="certificate">
+            <h2 class="text-responsive" style="color:green;font-size: 2rem;font-family: Verdana, Geneva, Tahoma, sans-serif;">STANDARD STAR GIFT PACK</h2>
+            <div class="selected-image" *ngIf="selectedImage">
+              <span class="cancel-symbol" (click)="hideImage()">&#10006;</span>
+              <img [src]="selectedImage.src" alt="Selected Image"  class="selected-img img-fluid">
+              <span class="custom-text" >{{ formneg.get('uname')!.value }}</span>
+            </div> 
+            
+
+            <!-- <img class="img-fluid" src="./assets/Task@star-registration.in/certificate-3.jpg" alt="Heart Nebula"> -->
+          </div>
+        </div>
+        <div class="col-12 col-md-6">
+      <div class="form" [formGroup]="formneg" >
+            
+            <h3 style="color: #333;">YOUR STAR INFORMATION</h3>
+            <label for="name">Name of the star *</label>
+            <input type="text" id="name"  class="form-control"
+             name="customText" 
+             formControlName="uname" placeholder="Enter your name"
+             required>
+             <div *ngIf="formneg.get('uname')!.hasError('required') && formneg.get('uname')!.touched" style="color:red">
+              Enter Your name
+            </div>
+            <div *ngIf="formneg.get('uname')!.hasError('pattern') && formneg.get('uname')!.touched" style="color: red;">
+              Enter text only
+             </div>
+            <label for="design">Design</label>
+            <select id="design" name="design">
+              <option value="heart">1 Heart Vertical</option>
+            </select>
+            <label for="date">Date of registration *</label>
+            <input type="date" id="date" name="date" class="form-control"  formControlName="udate" required>
+            <label for="constellation">Star Constellation *</label>
+            <select id="constellation" name="constellation">
+              <option value="assigned">Assigned by Star Register</option>
+              <option value="orion">Orion</option>
+              <option value="cassiopeia">Cassiopeia</option>
+              <option value="ursa-major">Ursa Major</option>
+            </select>
+            <p style="color: #777;">* Assigned by Star Register means your star is chosen based on your shipping address, guaranteeing visibility from your location.</p>
+            <label  for="message">Personal Message * -48</label>
+            <textarea class="form-control" id="message" name="message" placeholder="Enter your message here" formControlName="umessage"></textarea>
+            <div *ngIf="formneg.get('umessage')!.hasError('required') && formneg.get('umessage')!.touched" style="color:red">
+              Enter text
+            </div>
+            <div *ngIf="formneg.get('umessage')!.hasError('pattern') && formneg.get('umessage')!.touched" style="color: red;">
+              Enter text only
+             </div>
+          </div>  
+        </div>
+
+      </div> 
+<div *ngIf="formneg.get('umessage')!.value && formneg.get('uname')!.value && formneg.get('udate')!.value;then showdata else hidedata">
+</div>
+<ng-template #showdata>
+  <a class="btn btn-success btn-lg active" style="margin-top:2rem;" (click)="userRegistrationValues()" routerLink="/paymentdetails" role="button" aria-pressed="true">ADD CART</a>
+</ng-template>
+<ng-template #hidedata>
+  <h3 style="color: red; margin-top: 2rem;">Please enter all the details to proceed further
+</h3>
+</ng-template>

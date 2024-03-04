@@ -1,0 +1,74 @@
+<div class="contact1-data-1">
+  <div class="contact-section">
+    <div class="services-support">
+      <h3>MORE SERVICES AND SUPPORT</h3>
+      <ul style="font-size:18px;">
+        <li>Contact Us</li>
+        <li>Track Your Order/PDF</li>
+        <li>Frequently Asked Questions</li>
+        <li>The Register</li>
+        <li>Blog</li>
+        <li>Store Info</li>
+        <li>Print Quality</li>
+        <li>Reviews</li>
+        <li>General Terms</li>
+        <li>Return Policy</li>
+      </ul>
+    </div>
+    <div class="contact-form">
+      <h3>CONTACT US</h3>
+      <form>
+
+
+
+
+
+       
+
+
+
+
+
+
+
+
+
+
+        <label for="name">Name *</label>
+        <input type="text" id="name" placeholder="Name" name="name"[(ngModel)]="emailData.name" required>
+        
+        <label for="email">E-Mail *</label>
+        <input type="email" id="email" name="email" [(ngModel)]="emailData.to" placeholder="E-Mail" required>
+        
+        <label for="subject">Subject *</label>
+        <input type="text" id="subject"  [(ngModel)]="emailData.subject" placeholder="Subject" name="subject" required>
+        
+        <label for="comment">Comment *</label>
+        <textarea id="comment" [(ngModel)]="emailData.text" cols="50px" rows="5px" name="comment" placeholder="Comment" required></textarea>
+        
+        <label for="newsletter" style="font-size:22px;font-weight:50px;">SUBSCRIBE TO NEWSLETTER &nbsp;&nbsp;<input style="width:30px;height:25px;" type="checkbox" id="newsletter" name="newsletter">
+        </label>
+        <button type="submit" (click)="sendEmail()">SEND</button>
+      </form>
+    </div>
+    <div class="contact-info">
+      <p><span style="font-weight:bold;font-size:20px;">Tel</span>: +1 (646) 9346841 (USA)</p>
+      <p><span style="font-weight:bold;font-size:20px;">Email</span>: dhoothastarrregistration.net</p>
+      <h3>FOLLOW US</h3>
+      <div class="data-g1">
+        <div class="social-buttons">
+          <a href="https://yourbloglink.com" class="social-button blog">
+            <span class="icon">W</span>
+            <span class="text">OUR BLOG</span>
+          </a>
+          <a href="https://www.facebook.com/yourprofile" class="social-button facebook">
+            <span class="icon">f</span>
+            <span class="text">FACEBOOK</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+

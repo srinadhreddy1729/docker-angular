@@ -1,0 +1,31 @@
+
+
+            .whystar .star-card-1 img,
+            .whystar .star-card-2 img,
+            .whystar .star-card-3 img {
+                mix-blend-mode: color-burn;
+                width: 50px;
+                height: 60px;
+                margin-top: -2rem; 
+            }
+             
+
+             .whystar {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                padding: 20px;
+            }
+            .star-card-1,.star-card-3,.star-card-2 {
+                width: 80%;
+                margin: 20px;
+                padding: 20px;
+                background-color: #eafbea;
+                border-radius: 20px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+            .star-card-1,.star-card-3,.star-card-2 
+            {
+                box-shadow:2px 2px 10px;
+            }

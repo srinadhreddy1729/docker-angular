@@ -1,0 +1,21 @@
+
+.row img{
+    width:340px;
+    height:340px;
+    margin: 10px;
+
+ 
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left:75px;
+    overflow-x: hidden; 
+
+}
+@media screen and (max-width:900px) {
+    .row img 
+    {
+        margin-left: 120px;
+    }
+}

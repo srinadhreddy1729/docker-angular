@@ -1,0 +1,81 @@
+<div class="data">
+    <div class="container-xl px-4 mt-4 mrt">
+        <hr class="mt-0 mb-4">
+        <div class="row">
+            <div class="col-xl-8">
+                <div class="card mb-4">
+                    <div class="card-header">ADD NEW ADDRESS</div>
+                    <div class="card-body">
+                        <form [formGroup]="formdetails">
+                            <div class="row gx-3 mb-3">
+                                <div class="col-md-6">
+                                    <label class="small mb-1" for="inputFirstName">First name</label>
+                                    <input class="form-control" name="FirstName" formControlName="FirstName" id="inputFirstName" type="text" placeholder="Enter your first name" value="Valerie">
+                                </div>
+                                
+                                <div class="col-md-6">
+                                    <label class="small mb-1" for="inputLastName">Last name</label>
+                                    <input class="form-control" name="LastName" formControlName="LastName" id="inputLastName" type="text" placeholder="Enter your last name" value="Luna">
+                                </div>
+                            </div>
+                            <div class="row gx-3 mb-3">
+                                <div class="col-md-12">
+                                    <label class="small mb-1" for="inputOrgName">Organization name</label>
+                                    <input class="form-control" name="OrganizationName"   formControlName="OrganizationName" id="inputOrgName" type="text" placeholder="Enter your organization name" value="Start starsgalaxy">
+                                </div>
+                            </div>
+                            <div class="row gx-3 mb-3">
+                                <div class="col-md-6">
+                                    <label class="small mb-1" for="inputOrgName">Telephone</label>
+                                    <input class="form-control" name="Telephone"  formControlName="Telephone" id="inputOrgName" type="text" placeholder="Enter your Telephone name" value="555-123-4567">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="small mb-1" for="inputPhone">Fax</label>
+                                    <input class="form-control" name="Fax"  formControlName="Fax" id="inputPhone" type="tel" placeholder="Enter your Fax" value="555-123-4567">
+                                </div>
+                               
+                            </div>
+                            <div class="row gx-3 mb-3">
+                                <div class="col-md-12">
+                                    <label class="small mb-1" for="inputLocation">Street Address</label>
+                                    <input class="form-control" name="StreetAddress"  formControlName="StreetAddress" id="inputLocation" type="text" placeholder="Enter your Street Address" value="San Francisco, CA">
+                                </div>
+                               
+                            </div>
+                              <div class="row gx-3 mb-3">
+                                <div class="col-md-12">
+                                    <label class="small mb-1" for="inputLocation">VAT Number</label>
+                                    <input class="form-control" name="VATNumber" formControlName="VATNumber"id="inputLocation" type="text" placeholder="Enter your VAT Number" value="">
+                                </div>
+                            </div>
+                            <div class="row gx-3 mb-3">
+                                <div class="col-md-6">
+                                    <label class="small mb-1" for="inputFirstName">City</label>
+                                    <input class="form-control" name="City" formControlName="City" id="inputFirstName" type="text" placeholder="Enter your City" value="">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="small mb-1" for="inputLastName">State/Province</label>
+                                    <input class="form-control" name="State" formControlName="State" id="inputLastName" type="text" placeholder="Enter your State/Province" value="">
+                                </div>
+                            </div>
+                            <div class="row gx-3 mb-3">
+                                <div class="col-md-6">
+                                    <label class="small mb-1" for="inputFirstName">*Zip/Postal Code</label>
+                                    <input class="form-control" name="Zip" formControlName="Zip" id="inputFirstName" type="text" placeholder="Enter your Zip/Postal Code" value="">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="small mb-1" for="inputLastName">*Country</label>
+                                    <input class="form-control" name="Country" id="inputLastName" formControlName="Country" type="text" placeholder="Enter your Country" value="">
+                                </div>
+                            </div>
+                            <button class="btn btn-primary" type="button" (click)="addUserAdress()">Save changes</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    

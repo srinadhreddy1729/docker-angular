@@ -1,0 +1,7 @@
+<form (ngSubmit)="getThe()">
+
+<input type="text" [(ngModel)]="login.name" placeholder="Name" [ngModelOptions]="{standalone: true}">
+                <input type="email" [(ngModel)]="login.email" name="email" placeholder="Email" [ngModelOptions]="{standalone: true}">
+                <input type="password" [(ngModel)]="login.password" name="password" placeholder="Password" [ngModelOptions]="{standalone: true} ">
+                <button >Sign Up</button>
+            </form>
