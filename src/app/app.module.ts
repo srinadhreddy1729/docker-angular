@@ -18,8 +18,12 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { StarregistartionComponent } from './starregistartion/starregistartion.component';
 import { PaymentDetailsComponent } from './payment-details/payment-details.component';
-import { ReviewsComponent } from './reviews/reviews.component';
+import { ReviewsComponent } from '../../../ExampleForLearning/src/app/reviews/reviews.component';
 import { UniversalComponent } from './universal/universal.component';
+import { PaymentgatewayComponent } from './paymentgateway/paymentgateway.component';
+import { BoxComponent } from './box/box.component';
+import { StarMapComponent } from './star-map/star-map.component';
+import { StarMapEntryComponent } from './star-map-entry/star-map-entry.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +37,11 @@ import { UniversalComponent } from './universal/universal.component';
     StarregistartionComponent,
     PaymentDetailsComponent,
     ReviewsComponent,
-    UniversalComponent
+    UniversalComponent,
+    PaymentgatewayComponent,
+    BoxComponent,
+    StarMapComponent,
+    StarMapEntryComponent
      ],
   imports: [
     BrowserModule,

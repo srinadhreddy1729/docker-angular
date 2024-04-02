@@ -12,12 +12,7 @@
       <div class="card-body">
         <p>This package allows you to name a star that is visible in your area.</p>
         <ul *ngFor="let name3 of nameOption3;let i=index">
-          <!-- <li>Free Gift - Star Map</li>
-          <li>Lifetime registry record</li>
-          <li>Visible from your location</li>
-          <li>Registration certificate</li>
-          <li>Gift Folder</li>
-          <li>Electronic files included</li> -->
+          
           <li>{{name3.key}}</li>
           <span *ngIf="i>=nameOption3.length-2">
             </span>
@@ -44,13 +39,7 @@
       <div class="card-body">
         <p>This package allows you to name a star that is visible in your area.</p>
         <ul *ngFor="let name1 of nameOption1">
-          <!-- <li>Free Gift - Star Map</li>
-          <li>Lifetime registry record</li>
-          <li>Visible from your location</li>
-          <li>Registration certificate</li>
-          <li>Gift Folder</li>
-          <li>Electronic files included</li>
-          <li>{{aa}}</li> -->
+          
           <li>{{name1.key}}</li>
         </ul> 
       </div>
@@ -74,14 +63,6 @@
       </div>
  <div class="card-body">
         <p>This package allows you to name a star that is visible in your area.</p>
-        <!-- <ul>
-          <li>Free Gift - Star Map</li>
-          <li>Lifetime registry record</li>
-          <li>Visible from your location</li>
-          <li>Registration certificate</li>
-          <li>Gift Folder</li>
-          <li>Electronic files included</li>
-        </ul> -->
         <ul *ngFor="let name2 of nameOption2">
           <li>{{name2.key}}</li>
 </ul>

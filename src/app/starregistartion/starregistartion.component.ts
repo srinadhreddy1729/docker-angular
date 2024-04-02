@@ -33,17 +33,31 @@ export class StarregistartionComponent {
   }
 
 
-formneg:FormGroup=new FormGroup
-(
-  {
-    uname:new FormControl("",[Validators.required,Validators.pattern(/^[A-Za-z\s]+$/)]),
-    umessage:new FormControl("",[Validators.required,Validators.pattern(/^[A-Za-z\s]+$/)]),
-    udate:new FormControl('',Validators.required)
+// formneg:FormGroup=new FormGroup
+// (
+//   {
+//     uname:new FormControl("",[Validators.required,Validators.pattern(/^[A-Za-z\s]+$/)]),
+//     umessage:new FormControl("",[Validators.required,Validators.pattern(/^[A-Za-z\s]+$/)]),
+//     udate:new FormControl('',Validators.required)
 
-  }
+//   }
 
-)
-
+// )
+formneg = new FormGroup({
+  uname: new FormControl("", [
+    Validators.required,
+    Validators.pattern(/^[A-Za-z\s]+$/),
+    Validators.minLength(3), 
+    Validators.maxLength(30), 
+  ]),
+  umessage: new FormControl("", [
+    Validators.required,
+    Validators.minLength(5), 
+    Validators.maxLength(200), 
+  ]),
+  udate: new FormControl('', [
+    Validators.required,
+  ])})
 
 
   userRegistrationValues():void

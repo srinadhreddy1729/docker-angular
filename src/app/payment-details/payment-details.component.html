@@ -2,7 +2,7 @@
     <div class="card1 card">
         <img src="./assets\Task@star-registration.in\certificate-2.jpg" alt="Gift icon">
         <div class="card-content">
-          <h4>Free Worldwide Delivery</h4>
+          <h4>Worldwide Delivery</h4>
           <p>Flexible shipping and delivery options</p>
         </div>
       </div>
@@ -17,20 +17,20 @@
       </div><div class="card1 card">
         <img src="./assets\Task@star-registration.in\certificate-4.jpg" alt="Gift icon">
         <div class="card-content">
-          <h4>Best Price Guarantee Here</h4>
+          <h4>Best Price Guarantee</h4>
           <p>
 
-            Finding it cheaper somewhere else<br/> We refund the differenc</p>
+            Finding it cheaper somewhere else<br/> We refund the difference</p>
         </div>
       </div><div class="card1 card">
         <img src="./assets\Task@star-registration.in\certificate-5.jpg" alt="Gift icon">
         <div class="card-content">
           <h4>Free Worldwide Delivery</h4>
-          <p>Flexible shipping and delivery opti</p>
+          <p>Flexible shipping and delivery option</p>
         </div>
       </div>
     </div>
-<div class="data">
+<!-- <div class="data">
     <div class="container-xl px-4 mt-4 mrt">
         <p style="margin-left:31rem;color:red" *ngIf="formdetails.get('FirstName')!.hasError('required') && formdetails.get('FirstName')!.touched ">
             Enter Your FirstName   
@@ -102,7 +102,7 @@
                                     <input class="form-control" name="Country" id="inputLastName" formControlName="Country" type="text" placeholder="Enter your Country" value="">
                                 </div>
                             </div>
-                            <button class="btn btn-primary" type="button" (click)="addUserAdress()">Save changes</button>
+                            <button class="btn btn-primary" type="button" (click)="addUserAdress()" >Save changes</button>
                         </form>
                     </div>
                 </div>
@@ -112,4 +112,127 @@
     </div>
       
       
+     -->
+
+
+
+
+
+     <div class="data">
+        <div class="container-xl px-4 mt-4 mrt">
+            <hr class="mt-0 mb-4">
+            <div class="row">
+                <div class="col-xl-8">
+                    <div class="card mb-4">
+                        <div class="card-header">ADD NEW ADDRESS</div>
+                        <div class="card-body">
+                            <form [formGroup]="formdetails" (ngSubmit)="addUserAdress() ">
+                                <div class="row gx-3 mb-3">
+                                    <div class="col-md-6">
+                                        <label class="small mb-1" for="inputFirstName">First name</label>
+                                        <input class="form-control" formControlName="FirstName" id="inputFirstName" type="text" placeholder="Enter your first name">
+                                        <div *ngIf="formdetails.get('FirstName')!.errors && formdetails.get('FirstName')!.touched" class="error" style="color:red">
+                                            <div *ngIf="formdetails.get('FirstName')!.hasError('required')">First name is required.</div>
+                                            <div *ngIf="formdetails.get('FirstName')!.hasError('minlength')">First name must be at least 2 characters.</div>
+                                            <div *ngIf="formdetails.get('FirstName')!.hasError('maxlength')">First name cannot exceed 50 characters.</div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-md-6">
+                                        <label class="small mb-1" for="inputLastName">Last name</label>
+                                        <input class="form-control" formControlName="LastName" id="inputLastName" type="text" placeholder="Enter your last name">
+                                        <div *ngIf="formdetails.get('LastName')!.errors && formdetails.get('LastName')!.touched" class="error" style="color:red">
+                                            <div *ngIf="formdetails.get('LastName')!.hasError('required')">Last name is required.</div>
+                                            <div *ngIf="formdetails.get('LastName')!.hasError('minlength')">Last name must be at least 2 characters.</div>
+                                            <div *ngIf="formdetails.get('LastName')!.hasError('maxlength')">Last name cannot exceed 50 characters.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row gx-3 mb-3">
+                                    <div class="col-md-12">
+                                        <label class="small mb-1" for="inputOrgName">Organization name</label>
+                                        <input class="form-control" formControlName="OrganizationName" id="inputOrgName" type="text" placeholder="Enter your organization name">
+                                        <div *ngIf="formdetails.get('OrganizationName')!.errors && formdetails.get('OrganizationName')!.touched" class="error" style="color:red">
+                                            <div *ngIf="formdetails.get('OrganizationName')!.hasError('required')">Organization name is required.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row gx-3 mb-3">
+                                    <div class="col-md-6">
+                                        <label class="small mb-1" for="inputTelephone">Telephone</label>
+                                        <input class="form-control" formControlName="Telephone" id="inputTelephone" type="text" placeholder="Enter your telephone number">
+                                        <div *ngIf="formdetails.get('Telephone')!.errors && formdetails.get('Telephone')!.touched" class="error" style="color:red">
+                                            <div *ngIf="formdetails.get('Telephone')!.hasError('required')">Telephone number is required.</div>
+                                            <div *ngIf="formdetails.get('Telephone')!.hasError('pattern')">Invalid telephone number.</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="small mb-1" for="inputFax">Fax</label>
+                                        <input class="form-control" formControlName="Fax" id="inputFax" type="tel" placeholder="Enter your fax number">
+                                        <div *ngIf="formdetails.get('Fax')!.errors && formdetails.get('Fax')!.touched" class="error" style="color:red">
+                                            <div *ngIf="formdetails.get('Fax')!.hasError('required')">Fax number is required.</div>
+                                            <div *ngIf="formdetails.get('Fax')!.hasError('pattern')">Invalid fax number.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row gx-3 mb-3">
+                                    <div class="col-md-12">
+                                        <label class="small mb-1" for="inputStreetAddress">Street Address</label>
+                                        <input class="form-control" formControlName="StreetAddress" id="inputStreetAddress" type="text" placeholder="Enter your street address">
+                                        <div *ngIf="formdetails.get('StreetAddress')!.errors && formdetails.get('StreetAddress')!.touched" class="error" style="color:red">
+                                            <div *ngIf="formdetails.get('StreetAddress')!.hasError('required')">Street address is required.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row gx-3 mb-3">
+                                    <div class="col-md-12">
+                                        <label class="small mb-1" for="inputVATNumber">VAT Number</label>
+                                        <input class="form-control" formControlName="VATNumber" id="inputVATNumber" type="text" placeholder="Enter your VAT number">
+                                        <div *ngIf="formdetails.get('VATNumber')!.errors && formdetails.get('VATNumber')!.touched" class="error" style="color:red">
+                                            <div *ngIf="formdetails.get('VATNumber')!.hasError('required')">VAT number is required.</div>
+                                            <div *ngIf="formdetails.get('VATNumber')!.hasError('pattern')">Invalid VAT number.</div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row gx-3 mb-3">
+                                    <div class="col-md-6">
+                                        <label class="small mb-1" for="inputCity">City</label>
+                                        <input class="form-control" formControlName="City" id="inputCity" type="text" placeholder="Enter your city">
+                                        <div *ngIf="formdetails.get('City')!.errors && formdetails.get('City')!.touched" class="error" style="color:red">
+                                            <div *ngIf="formdetails.get('City')!.hasError('required')">City is required.</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="small mb-1" for="inputState">State/Province</label>
+                                        <input class="form-control" formControlName="State" id="inputState" type="text" placeholder="Enter your state/province">
+                                        <div *ngIf="formdetails.get('State')!.errors && formdetails.get('State')!.touched" class="error" style="color:red">
+                                            <div *ngIf="formdetails.get('State')!.hasError('required')">State/Province is required.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row gx-3 mb-3">
+                                    <div class="col-md-6">
+                                        <label class="small mb-1" for="inputZip">Zip/Postal Code</label>
+                                        <input class="form-control" formControlName="Zip" id="inputZip" type="text" placeholder="Enter your zip/postal code">
+                                        <div *ngIf="formdetails.get('Zip')!.errors && formdetails.get('Zip')!.touched" class="error" style="color:red">
+                                            <div *ngIf="formdetails.get('Zip')!.hasError('required')">Zip/Postal code is required.</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="small mb-1" for="inputCountry">Country</label>
+                                        <input class="form-control" formControlName="Country" id="inputCountry" type="text" placeholder="Enter your country">
+                                        <div *ngIf="formdetails.get('Country')!.errors && formdetails.get('Country')!.touched" class="error" style="color:red">
+                                            <div *ngIf="formdetails.get('Country')!.hasError('required')">Country is required.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="btn btn-primary" type="submit" [disabled]="formdetails.invalid">Save changes</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     

@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { BackendServiceService } from '../backend-service.service';
 import { LoginPage } from '../login-page';
 import { FormControl, FormGroup, FormsModule, Validators } from '@angular/forms';
-
 @Component({
   selector: 'app-edit-details',
   templateUrl: './edit-details.component.html',
@@ -12,8 +11,8 @@ export class EditDetailsComponent  {
   login:any=new LoginPage();
   
   negForm=new FormGroup({
-    uname:new FormControl("name",Validators.required),
-    email:new FormControl("email",Validators.required)
+    uname:new FormControl("",Validators.required),
+    email:new FormControl("",Validators.required)
   })
   
   constructor(private service:BackendServiceService)
@@ -21,11 +20,18 @@ export class EditDetailsComponent  {
 
   }
   ngOnInit(): void {
-    this.gettingTheAllTheData();
+    this.gettingTheAllTheData()
+
   }
   gettingTheAllTheData()
   {
-    this.service.gettingData().subscribe((data)=>this.login=data)
+    this.service.gettingData().subscribe((data)=>{
+      this.login=data
+    this.negForm.get('uname')!=this.login.uname
+  this.negForm.get('email')!=this.login.email
+    }
+    )
+   
   }
   changeDetails()
   {
@@ -38,7 +44,7 @@ export class EditDetailsComponent  {
         console.log(" i got error")
 
       }
-      
+   
     })
   }
 

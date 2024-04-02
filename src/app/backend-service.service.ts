@@ -41,4 +41,12 @@ return this.http.post<any[]>(`${this.url}`+"/changeDetails",login);
   {
     return this.http.post<any[]>(`${this.url}`+'/addpaymentdetails',paymentDetails)
   }
+  gettingUserDataById(id:any):Observable<any>
+  {
+    return this.http.post<any[]>(`${this.url}`+'/getUserDetailsId',{id:id});
+  }
+  gettingStarById(id:any)
+  {
+    return this.http.post<any[]>(`http://localhost:9090/getdata`,{id:id});
+  }
 }

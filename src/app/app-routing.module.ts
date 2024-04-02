@@ -25,6 +25,11 @@ import { SignoutComponent } from './signout/signout.component';
 import { StarregistartionComponent } from './starregistartion/starregistartion.component';
 import { PaymentDetailsComponent } from './payment-details/payment-details.component';
 import { UniversalComponent } from './universal/universal.component';
+import { PaymentgatewayComponent } from './paymentgateway/paymentgateway.component';
+import { BoxComponent } from './box/box.component';
+import { ReviewsComponent } from '../../../ExampleForLearning/src/app/reviews/reviews.component';
+import { StarMapEntryComponent } from './star-map-entry/star-map-entry.component';
+import { StarMapComponent } from './star-map/star-map.component';
 
 
 const routes: Routes = [
@@ -112,7 +117,23 @@ const routes: Routes = [
       path:'signout',component:SignoutComponent
     },
     {
+      path:'StarMap',component:StarMapComponent
+    },
+    {
       path:'universal',component:UniversalComponent
+    },
+    {
+      path:'paymentgateway',component:PaymentgatewayComponent
+
+    },
+    {
+path:'StarMapEntry',component:StarMapEntryComponent
+    },
+    {
+      path:'box',component:BoxComponent
+    },
+    {
+      path:'review',component:ReviewsComponent
     }
 ];
 

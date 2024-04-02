@@ -1,60 +1,59 @@
 <nav class="nav1">
-    Valentines Day Sale:37% OFF EVERYTHING
-    </nav>
-    <nav class="nav2">
-        <ul>
-            <li><a routerLink="/rating">Excellent</a></li>
-            <li><a routerLink="/blog">English</a></li>
-          <li><a routerLink="/dashboard">INR</a></li>
-          <li ><a routerLink="/">checkOut</a></li>
-          <li><a (click)="navigateToAccount()">{{ isLoggedIn ? 'My Profile' : 'My Account' }}</a></li>
+  Valentines Day Sale: 37% OFF EVERYTHING
+</nav>
+<div class="menu">
+<div class="nav2-dropdown nav2" *ngIf="isSmallScreen" >
+  <div class="menu-def">
 
-          <li><a routerLink="/services">TRACK YOUR ORDER/PDF</a></li>
-          <li><a routerLink="/contact">Find Your Star</a></li>
-          
-        </ul>
-      </nav>
-     
-      <nav class="nav3">
-        <ul>
-            <li><a routerLink="/rating">DHOOTHASTARREGISTARION.COM</a></li>
-            <li><a routerLink="/navbar">HOME</a></li>
-          <li><a routerLink="/drop">ORDER</a></li>
-          <li ><a routerLink="/">DELIVERY & PAYMENTS</a></li>
-          <li><a routerLink="/about">REVIEWS</a></li>
-          <li><a routerLink="/contact">CONTACT</a></li>
-          <a routerLink="/drop">
-            <button   type="button" class="btn btn-success data-button">Buy Now</button>
-          </a>
-          
-        </ul>
-      </nav>
+  <i class="fa-solid fa-bars fa-3x custom-icon" (click)="toggleNav2()"></i>
+  <strong>AnyStarRegistration.com</strong> 
+</div>
+  <!-- <button class="dropbtn" (click)="toggleNav2()">Nav 2</button> -->
+  <!-- <i (click)="toggleNav2()" class="fa-solid fa-login"></i> -->
+  <i class="fa-solid fa-grid"></i>
+  <div class="dropdown-content" *ngIf="nav2Visible">
+    <a routerLink="/">checkOut</a>
+    <a routerLink="/navbar">HOME</a>
+    <a routerLink="/drop">ORDER</a>
+    <a routerLink="/">DELIVERY & PAYMENTS</a>
+    <a routerLink="/about">REVIEWS</a>
+    <a routerLink="/contact">CONTACT</a>
+    <a routerLink="/drop">
+      Buy Now
+    </a>
+    <a (click)="navigateToAccount()">{{ isLoggedIn ? 'My Profile' : 'My Account' }}</a>
+    <a routerLink="/services">TRACK YOUR ORDER/PDF</a>
+    <a routerLink="/StarMapEntry">Find Your Star</a>
+  </div>
+</div>
 
+</div>
 
 
+<nav class="nav2" *ngIf="!isSmallScreen">
+  <ul>
+    <li><a routerLink="/rating">Excellent</a></li>
+    <li><a routerLink="/blog">English</a></li>
+    <li><a routerLink="/dashboard">INR</a></li>
+    <li><a routerLink="/">checkOut</a></li>
+    <li><a (click)="navigateToAccount()">{{ isLoggedIn ? 'My Profile' : 'My Account' }}</a></li>
+    <li><a routerLink="/services">TRACK YOUR ORDER/PDF</a></li>
+    <li><a routerLink="/StarMapEntry">Find Your Star</a></li>
+  </ul>
+</nav>
 
+<nav class="nav3" *ngIf="!isSmallScreen">
+  <ul>
+    <!-- <li><a routerLink="/rating">AnyStarRegistration.com</a></li> -->
+         <li><a routerLink="/rating"><img src="\assets\Task@star-registration.in\anystar.png" width="130px" height="60px">AnyStarRegistration.com</a></li>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      
+    <li><a routerLink="/navbar">HOME</a></li>
+    <li><a routerLink="/drop">ORDER</a></li>
+    <li><a routerLink="/">DELIVERY & PAYMENTS</a></li>
+    <li><a routerLink="/about">REVIEWS</a></li>
+    <li><a routerLink="/contact">CONTACT</a></li>
+    <a routerLink="/drop">
+      <button type="button" class="btn btn-success data-button">Buy Now</button>
+    </a>
+  </ul>
+</nav>

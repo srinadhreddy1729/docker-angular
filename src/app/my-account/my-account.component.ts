@@ -7,6 +7,7 @@ import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
 import { DOCUMENT, isPlatformBrowser } from '@angular/common';
 import { ToastrService } from 'ngx-toastr';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { IsNull } from 'typeorm';
 
 
 @Component({
@@ -27,10 +28,6 @@ constructor(private service:BackendServiceService,
 }
 
 
-
-
-
-
   ngOnInit(): void {
 
     if (isPlatformBrowser(this.platformId)) 
@@ -49,6 +46,7 @@ constructor(private service:BackendServiceService,
   }
 }
 userSignIn(){
+  
   this.service.getting(this.login).subscribe((data:any)=>{
       if(data.message==='login sucessfully'){
         localStorage.setItem("userdata", JSON.stringify(data.userdata));
@@ -66,6 +64,8 @@ userSignIn(){
     },err=>{}
   );
 }
+  
+
 
 
 
@@ -92,17 +92,10 @@ this.toastr.success("sucessfully completed sing up please do sing in")
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
+
+
+
+
+
+

@@ -1,41 +1,10 @@
-<div class="contact1-data-1">
-  <div class="contact-section">
-    <div class="services-support">
-      <h3>MORE SERVICES AND SUPPORT</h3>
-      <ul style="font-size:18px;">
-        <li>Contact Us</li>
-        <li>Track Your Order/PDF</li>
-        <li>Frequently Asked Questions</li>
-        <li>The Register</li>
-        <li>Blog</li>
-        <li>Store Info</li>
-        <li>Print Quality</li>
-        <li>Reviews</li>
-        <li>General Terms</li>
-        <li>Return Policy</li>
-      </ul>
-    </div>
-    <div class="contact-form">
+
+    <!-- <div class="contact-form">
       <h3>CONTACT US</h3>
       <form>
-
-
-
-
-
-       
-
-
-
-
-
-
-
-
-
-
+      
         <label for="name">Name *</label>
-        <input type="text" id="name" placeholder="Name" name="name"[(ngModel)]="emailData.name" required>
+        <input type="text" id="name" placeholder="Name" name="name" [(ngModel)]="emailData.name" required>
         
         <label for="email">E-Mail *</label>
         <input type="email" id="email" name="email" [(ngModel)]="emailData.to" placeholder="E-Mail" required>
@@ -49,8 +18,110 @@
         <label for="newsletter" style="font-size:22px;font-weight:50px;">SUBSCRIBE TO NEWSLETTER &nbsp;&nbsp;<input style="width:30px;height:25px;" type="checkbox" id="newsletter" name="newsletter">
         </label>
         <button type="submit" (click)="sendEmail()">SEND</button>
-      </form>
+      </form> 
+    </div> -->
+
+    
+
+    <!-- <div class="contact-form">
+      <h3>CONTACT US</h3>
+      <form #emailForm="ngForm" (ngSubmit)="sendEmail()">
+      
+        <label for="name">Name *</label>
+        <input type="text" id="name" placeholder="Name" name="name" [(ngModel)]="emailData.name" required #name="ngModel">
+        <div *ngIf="name.errors?.['required'] && (name.dirty || name.touched)" class="error">
+          <div *ngIf="name.errors?.['required']" style="color:red">Name is required.</div>
+        </div>
+        
+        <label for="email">E-Mail *</label>
+        <input type="email" id="email" name="email" [(ngModel)]="emailData.to" placeholder="E-Mail" required #email="ngModel">
+        <div *ngIf="email.errors?.['required'] && (email.dirty || email.touched)" class="error">
+          <div *ngIf="email.errors?.['required']" style="color:red">Email is required.</div>
+          <div *ngIf="email.errors?.['email']" style="color:red">Please enter a valid email address.</div>
+        </div>
+        
+        <label for="subject">Subject *</label>
+        <input type="text" id="subject" [(ngModel)]="emailData.subject" placeholder="Subject" name="subject" required #subject="ngModel">
+        <div *ngIf="subject.errors?.['required'] && (subject.dirty || subject.touched)" class="error">
+          <div *ngIf="subject.errors?.['required']" style="color:red">Subject is required.</div>
+        </div>
+        
+        <label for="comment">Comment *</label>
+        <textarea id="comment" [(ngModel)]="emailData.text" cols="50px" rows="5px" name="comment" placeholder="Comment" required #comment="ngModel"></textarea>
+        <div *ngIf="comment.errors?.['required'] && (comment.dirty || comment.touched)" class="error">
+          <div *ngIf="comment.errors?.['required']" style="color:red">Comment is required.</div>
+        </div>
+        
+        <label for="newsletter" style="font-size:22px;font-weight:50px;">SUBSCRIBE TO NEWSLETTER &nbsp;&nbsp;<input style="width:30px;height:25px;" type="checkbox" id="newsletter" name="newsletter">
+        </label>
+        <button type="submit" [disabled]="emailForm.invalid">SEND</button>
+      </form> 
     </div>
+     -->
+
+
+
+     <div class="contact1-data-1">
+      <div class="contact-section">
+        <div class="services-support">
+          <h3>MORE SERVICES AND SUPPORT</h3>
+          <ul style="font-size:18px;">
+            <li>Contact Us</li>
+            <li>Track Your Order/PDF</li>
+            <li>Frequently Asked Questions</li>
+            <li>The Register</li>
+            <li>Blog</li>
+            <li>Store Info</li>
+            <li>Print Quality</li>
+            <li>Reviews</li>
+            <li>General Terms</li>
+            <li>Return Policy</li>
+          </ul>
+        </div>
+
+
+
+
+
+     <div class="contact-form">
+      <h3>CONTACT US</h3>
+      <form #emailForm="ngForm" (ngSubmit)="sendEmail()">
+      
+        <label for="name">Name *</label>
+        <input type="text" id="name" placeholder="Name" name="name" [(ngModel)]="emailData.name" required #nameInput="ngModel">
+        <div *ngIf="nameInput.invalid && (nameInput.dirty || nameInput.touched)" class="error" style="color: red;">
+          <div *ngIf="nameInput.errors?.['required']">Name is required.</div>
+        </div>
+        
+        <label for="email">E-Mail *</label>
+        <input type="email" id="email" name="email" [(ngModel)]="emailData.to" placeholder="E-Mail" required #emailInput="ngModel">
+        <div *ngIf="emailInput.invalid && (emailInput.dirty || emailInput.touched)" class="error" style="color: red;">
+          <div *ngIf="emailInput.errors?.['required']">Email is required.</div>
+          <div *ngIf="emailInput.errors?.['email']">Please enter a valid email address.</div>
+        </div>
+        
+        <label for="subject">Subject *</label>
+        <input type="text" id="subject" [(ngModel)]="emailData.subject" placeholder="Subject" name="subject" required #subjectInput="ngModel">
+        <div *ngIf="subjectInput.invalid && (subjectInput.dirty || subjectInput.touched)" class="error" style="color: red;">
+          <div *ngIf="subjectInput.errors?.['required']">Subject is required.</div>
+        </div>
+        
+        <label for="comment">Comment *</label>
+        <textarea id="comment" [(ngModel)]="emailData.text" cols="50px" rows="5px" name="comment" placeholder="Comment" required #commentInput="ngModel"></textarea>
+        <div *ngIf="commentInput.invalid && (commentInput.dirty || commentInput.touched)" class="error" style="color: red;">
+          <div *ngIf="commentInput.errors?.['required']">Comment is required.</div>
+        </div>
+        
+        <label for="newsletter" style="font-size:22px;font-weight:50px;">SUBSCRIBE TO NEWSLETTER &nbsp;&nbsp;<input style="width:30px;height:25px;" type="checkbox" id="newsletter" name="newsletter">
+        </label>
+        
+        <button type="submit" [disabled]="emailForm.invalid">SEND</button>
+      </form> 
+    </div>
+    
+    
+
+
     <div class="contact-info">
       <p><span style="font-weight:bold;font-size:20px;">Tel</span>: +1 (646) 9346841 (USA)</p>
       <p><span style="font-weight:bold;font-size:20px;">Email</span>: dhoothastarrregistration.net</p>

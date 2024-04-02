@@ -231,11 +231,84 @@
 
 
 
+.error-message {
+    color: red;
+    font-size: 12px;
+  }
+  
+  button[type="submit"] {
+    margin-top: 10px;
+    background-color: orange;
+    color: #fff;
+    font-size: 12px;
+    padding: 10px 45px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+  
 
 
 
 
 
+
+
+  .error-message {
+    color: red;
+    font-size: 12px;
+  }
+  
+  .error-messages {
+    height: 3em; /* Set a fixed height */
+    overflow: hidden; /* Hide overflowing content */
+  }
+  
+  .error-messages.show {
+    display: block; /* Show error messages when there's an error */
+  }
+  
+  button[type="submit"] {
+    margin-top: 10px;
+    background-color: orange;
+    color: #fff;
+    font-size: 12px;
+    padding: 10px 45px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #00a1ff;
+  }
+  
+  input.ng-touched.ng-invalid {
+    border: 2px solid red;
+  }
+  
+  input.ng-touched.ng-valid {
+    border: 2px solid green;
+  }
+  
+
+
+
+
+
+
+  
+
+
+
+
+  
 
 
 

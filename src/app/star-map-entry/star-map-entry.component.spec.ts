@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ReviewsComponent } from './reviews.component';
+import { StarMapEntryComponent } from './star-map-entry.component';
 
-describe('ReviewsComponent', () => {
-  let component: ReviewsComponent;
-  let fixture: ComponentFixture<ReviewsComponent>;
+describe('StarMapEntryComponent', () => {
+  let component: StarMapEntryComponent;
+  let fixture: ComponentFixture<StarMapEntryComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ReviewsComponent]
+      declarations: [StarMapEntryComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(ReviewsComponent);
+    fixture = TestBed.createComponent(StarMapEntryComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

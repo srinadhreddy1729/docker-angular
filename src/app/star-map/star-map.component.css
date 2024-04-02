@@ -1,0 +1,141 @@
+
+#inputForm {
+    position: absolute;
+    left: 20%;
+    top: 380px;
+    z-index: 2;
+     background:rgb(67, 67, 166) ;              /*   #000046 */
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#starIdInput {
+    width: 800px;
+    padding: 5px;
+    margin-right: 10px; 
+}
+
+#submitBtn {
+    padding: 5px 10px;
+    border: none;
+
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.card {
+    position: absolute;
+    left: 170px;
+    top: 700px;
+    transform: translateY(-50%);
+    background: #fff; 
+    /* background:linear-gradient( #174E83 0%, #071D31 100%) 0% 0% no-repeat padding-box; */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    min-width: 300px;
+    margin-top: 20px;
+    z-index: 2;
+}
+
+
+
+.card p {
+    margin: 5px 0;
+}
+
+.card p strong {
+    font-weight: bold;
+}
+.card p span {
+  /* font-weight: 400; */
+  font-weight: 600;
+  /* color:rgb(212, 212, 212); */
+}
+/*rgb(212, 212, 212); */
+/* .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #555;
+} */
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    color: #777; 
+    transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+    color: #333; /* Darken color on hover */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  #search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: auto;
+    max-width: 500px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+  }
+  #starIdInput, #submitBtn {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+  }
+  #starIdInput {
+    flex-grow: 1;
+  }
+  #submitBtn {
+    background-color: #1CB5E0;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  #submitBtn:hover {
+    background-color: #0d8abc;
+  }
+
+  @media (max-width: 768px) {
+    #search-container {
+      flex-direction: row;
+    }
+    #starIdInput, #submitBtn {
+      width: auto;
+    }
+  }
