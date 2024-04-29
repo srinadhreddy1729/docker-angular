@@ -1,3 +1,4 @@
+
 <div class="star-submit-form">
 <div id="inputForm">
  <input type="text" id="starIdInput" placeholder="Enter Star ID">
@@ -5,15 +6,16 @@
 </div>
 </div>
 <div class="card" id="card">
-    <span class="close-btn" (click)="closeCard()">&times;</span>
+    <!-- <span class="close-btn" (click)="closeCard()">&times;</span> -->
     <p><strong>Star ID:</strong> <span id="starId"></span></p>
     <p><strong>Star Name:</strong> <span id="starName"></span></p>
     <p><strong>Date:</strong> <span id="starDate"></span></p>
-    <p><strong>Registry number:</strong> <span id="starRegistryNumber"></span></p>
+    <p><strong>Registry number:</strong> <span style="color:#FF6F61" id="starRegistryNumber"></span></p>
     <p><strong>Registered by:</strong> <span id="starRegisteredBy"></span></p>
-    <p><strong>Distance:</strong> <span id="starDistance"></span></p>
-    <p><strong>Spectral Type:</strong> <span id="starSpectralType"></span></p>
-    <p><strong>Ra/Dec:</strong> <span id="starRaDec"></span></p>
-    <p><strong>Az/Alt:</strong> <span id="starAzAlt"></span></p>
+    <p><strong style="display:none;">Distance:</strong> <span id="starDistance"></span></p>
+    <p><strong>Coordinates:</strong> <span id="Coordinates"></span></p>
+    <p><strong style="display:none;">Ra/Dec:</strong> <span id="starRaDec"></span></p>
+    <p><strong style="display:none;">Az/Alt:</strong> <span id="starAzAlt"></span></p>
 </div>
 <div #container></div>
+<h1 class="text-center">Note:Please use PCs or laptops for a better appearance.</h1>

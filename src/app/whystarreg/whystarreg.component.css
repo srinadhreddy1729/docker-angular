@@ -1,33 +1,129 @@
 
 
-            .whystar .star-card-1 img,
-            .whystar .star-card-2 img,
-            .whystar .star-card-3 img {
+
+             .whystar {
+                text-align: center;
+                padding: 20px;
+              }
+          
+              .star-card {
+                width: 80%;
+                margin: 20px auto;
+                padding: 20px;
+                background-color: #eafbea;
+                border-radius: 20px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                text-align: left; 
+              }
+          
+              .star-card img {
                 mix-blend-mode: color-burn;
                 width: 50px;
                 height: 60px;
-                margin-top: -2rem; 
-            }
-             
+                margin-top: -2rem;
+                display: block; 
+                margin: 0 auto 1rem; 
+              }
+          
+              .center-content {
+                text-align: center; 
+              }
+          
 
-             .whystar {
-                display: flex;
-                align-items: center;
-                flex-direction: column;
-                flex-wrap: wrap;
-                text-align: center;
-                padding: 20px;
-            }
-            .star-card-1,.star-card-3,.star-card-2 {
-                width: 80%;
-                margin: 20px;
-                padding: 20px;
-                background-color: #eafbea;
-                min-height: 120px;
-                border-radius: 20px;
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            }
-            .star-card-1,.star-card-3,.star-card-2 
-            {
-                box-shadow:2px 2px 10px;
-            }
+              /* External CSS file for custom styles */
+
+.custom-heading {
+    font-size: 2rem; 
+  }
+  .data
+  {
+    font-size: 1.7rem; 
+
+  }
+  
+  @media (max-width: 576px) {
+    .custom-heading {
+      font-size: 1.5rem;
+    }
+    .data
+  {
+    font-size: 1.2rem; 
+
+  }
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  .answer-text {
+    font-size: 16px;
+    color: #333;
+    margin-top: 20px;
+  }
+  
+  .question-line {
+    border: none;
+    height: 2px;
+    background-color: #333; 
+    margin-top: 20px; 
+  }
+  .question-label {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .question-button {
+    color: #9f5353;
+    border: none;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .question-button:hover {
+    color: green;
+  }
+  .custom-heading
+  {
+      font-size: 2rem;
+        
+  }
+  @media (max-width: 576px) {
+      .custom-heading {
+        font-size: 1.5rem;
+      }
+    
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    

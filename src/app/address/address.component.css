@@ -4,12 +4,12 @@
     height: 100%;
    
     }
-    .row
+  .row
     {
         display:flexbox;
         justify-content: center;
         align-items: center;
-    }
+   }
     input.ng-touched.ng-invalid
 {
   border: 2px solid red;

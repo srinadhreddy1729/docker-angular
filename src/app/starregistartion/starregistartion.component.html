@@ -1,147 +1,86 @@
-<div class="selected-image" *ngIf="selectedImage">
-  <img [src]="selectedImage.src" alt="Selected Image"  class="selected-img img-fluid">
-  <span class="custom-text" >{{ formneg.get('uname')!.value }}</span>
-</div> 
-<img class="sri-data" src="./assets\Task@star-registration.in\certificate-2.jpg">
-  <!-- <span class="custom-text" >{{ formneg.get('uname')!.value }}</span>  -->
-
-
-
-    <div class="gallery">
-      <div *ngFor="let imageData of imageData" class="image-container" >
-        <img [src]="imageData.src" alt="Image" class="data" 
-             [class.selected]="clickedImageSrc === imageData.src" (click)="showImage(imageData)">
-      </div>
-    </div>
-  
-
-
-  
-
-
-    <!-- <div class="container">
-    <div class="content">
-      <div class="row">
-        <div class="col-12 col-md-6">
-          <div class="certificate">
-            <h2 class="text-responsive" style="color:green;font-size: 2rem;font-family: Verdana, Geneva, Tahoma, sans-serif;">STANDARD STAR GIFT PACK</h2>
-          </div>
-        </div>
-        <div class="col-12 col-md-6">
-      <div class="form" [formGroup]="formneg" >
-            
-            <h3 style="color: #333;">YOUR STAR INFORMATION</h3>
-            <label for="name">Name of the star *</label>
-            <input type="text" id="name"  class="form-control"
-             name="customText" 
-             formControlName="uname" placeholder="Enter your name"
-             required>
-             <div *ngIf="formneg.get('uname')!.hasError('required') && formneg.get('uname')!.touched" style="color:red">
-              Enter Your name
-            </div>
-            <div *ngIf="formneg.get('uname')!.hasError('pattern') && formneg.get('uname')!.touched" style="color: red;">
-              Enter text only
-             </div>
-            <label for="design">Design</label>
-            <select id="design" name="design">
-              <option value="heart">1 Heart Vertical</option>
-            </select>
-            <label for="date">Date of registration *</label>
-            <input type="date" id="date" name="date" class="form-control"  formControlName="udate" required>
-            <label for="constellation">Star Constellation *</label>
-            <select id="constellation" name="constellation">
-              <option value="assigned">Assigned by Star Register</option>
-              <option value="orion">Orion</option>
-              <option value="cassiopeia">Cassiopeia</option>
-              <option value="ursa-major">Ursa Major</option>
-            </select>
-            <p style="color: #777;">* Assigned by Star Register means your star is chosen based on your shipping address, guaranteeing visibility from your location.</p>
-            <label  for="message">Personal Message * -48</label>
-            <textarea class="form-control" id="message" name="message" placeholder="Enter your message here" formControlName="umessage"></textarea>
-            <div *ngIf="formneg.get('umessage')!.hasError('required') && formneg.get('umessage')!.touched" style="color:red">
-              Enter text
-            </div>
-            <div *ngIf="formneg.get('umessage')!.hasError('pattern') && formneg.get('umessage')!.touched" style="color: red;">
-              Enter text only
-             </div>
-          </div>  
-        </div>
-
-      </div> 
-        <div class="btn btn-success btn-lg active"  [disabled]="formneg.invalid" style="margin-top:2rem;" (click)="userRegistrationValues()" routerLink="/paymentdetails" role="button" aria-pressed="true">ADD CART</div>
-      </div>
-
- <ng-template #showdata>
-  <a class="btn btn-success btn-lg active" style="margin-top:2rem;" (click)="userRegistrationValues()" routerLink="/paymentdetails" role="button" aria-pressed="true">ADD CART</a>
-</ng-template>
-<ng-template #hidedata>
-  <h3 style="color: red; margin-top: 2rem;">Please enter all the details to proceed further
-</h3>
-</ng-template> -->
-
-
 
 <div class="container">
-  <div class="content">
-    <div class="row">
-      <div class="col-12 col-md-6">
-        <div class="certificate">
-          <h2 class="text-responsive" style="color:green;font-size: 2rem;font-family: Verdana, Geneva, Tahoma, sans-serif;">STANDARD STAR GIFT PACK</h2>
+  <div class="row">
+    <div class="col-12 col-md-6 order-md-2">
+      <div class="choose-certificate text-center">
+        <p class="h3" style="color: indigo;">Choose Certificate</p>
+      </div>
+      <div class="selected-image text-center" *ngIf="selectedImage">
+        <img [src]="selectedImage.src" alt="Selected Image" class="img-fluid">
+        <span class="custom-text">{{ selectedImage.text }}</span>
+      </div>
+      <div class="gallery">
+        <div class="image-container">
+          <img [src]="imageData[0].src" alt="Image" class="data" (click)="showImage(imageData[0])">
+        </div>
+        <div *ngFor="let imageData of imageData.slice(1)" class="image-container">
+          <img [src]="imageData.src" alt="Image" class="data" (click)="showImage(imageData)">
         </div>
       </div>
-      <div class="col-12 col-md-6">
-        <div class="form" [formGroup]="formneg">
-          <h3 style="color: #333;">YOUR STAR INFORMATION</h3>
-          <label for="name">Name of the star *</label>
-          <input type="text" id="name" class="form-control" name="customText" formControlName="uname" placeholder="Enter your name" required>
-          <div *ngIf="formneg.get('uname')!.hasError('required') && formneg.get('uname')!.touched" style="color:red">
-            Name is required
-          </div>
-          <div *ngIf="formneg.get('uname')!.hasError('pattern') && formneg.get('uname')!.touched" style="color: red;">
-            Please enter only letters and spaces
-          </div>
-          <div *ngIf="formneg.get('uname')!.hasError('minlength') && formneg.get('uname')!.touched" style="color: red;">
-            Name must be at least 3 characters long
-          </div>
-          <div *ngIf="formneg.get('uname')!.hasError('maxlength') && formneg.get('uname')!.touched" style="color: red;">
-            Name must not exceed 30 characters
-          </div>
+    </div>
+    <div class="col-12 col-md-6 order-md-1">
+      <div class="form" [formGroup]="formneg">
+        <h3 style="color: #333;">YOUR STAR INFORMATION</h3>
+        <label for="name">Name of the star *</label>
+        <input type="text" id="name" class="form-control" name="customText" formControlName="uname" placeholder="Enter your name" required>
+        <div class="error-message" style="color:red" *ngIf="formneg.get('uname')!.hasError('required') && formneg.get('uname')!.touched">
+          Name is required
+        </div>
+        <div class="error-message" style="color:red" *ngIf="formneg.get('uname')!.hasError('pattern') && formneg.get('uname')!.touched">
+          Please enter only letters and spaces
+        </div>
+        <div class="error-message" style="color:red" *ngIf="formneg.get('uname')!.hasError('minlength') && formneg.get('uname')!.touched">
+          Name must be at least 3 characters long
+        </div>
+        <div class="error-message" style="color:red" *ngIf="formneg.get('uname')!.hasError('maxlength') && formneg.get('uname')!.touched">
+          Name must not exceed 30 characters
+        </div>
 
-          <label for="design">Design</label>
-          <select id="design" name="design">
-            <option value="heart">1 Heart Vertical</option>
-          </select>
+        <label for="design">Design</label>
+        <select id="design" name="design">
+          <option value="heart">1 Heart Vertical</option>
+        </select>
 
-          <label for="date">Date of registration *</label>
-          <input type="date" id="date" name="date" class="form-control" formControlName="udate" required>
+        <label for="date">Date of registration *</label>
+        <input type="date" id="date" name="date" class="form-control" formControlName="udate" required>
 
-          <label for="constellation">Star Constellation *</label>
-          <select id="constellation" name="constellation">
-            <option value="assigned">Assigned by Star Register</option>
-            <option value="orion">Orion</option>
-            <option value="cassiopeia">Cassiopeia</option>
-            <option value="ursa-major">Ursa Major</option>
-          </select>
+        <label for="constellation">Star Constellation *</label>
+        <select id="constellation" name="constellation">
+          <option value="assigned">Assigned by Star Register</option>
+          <option value="orion">Orion</option>
+          <option value="cassiopeia">Cassiopeia</option>
+          <option value="ursa-major">Ursa Major</option>
+        </select>
+        <p style="color: #777;">* Assigned by Star Register means your star is chosen based on your shipping address, guaranteeing visibility from your location.</p>
 
-          <p style="color: #777;">* Assigned by Star Register means your star is chosen based on your shipping address, guaranteeing visibility from your location.</p>
+        <label for="email">Email *</label>
+        <input type="email" id="email" class="form-control" name="email" formControlName="uemail" placeholder="Enter your email" required>
+        <!-- Error messages for email field -->
+        <div class="error-message" style="color:red" *ngIf="formneg.get('uemail')!.hasError('required') && formneg.get('uemail')!.touched">
+          Email is required
+        </div>
+        <div class="error-message" style="color:red" *ngIf="formneg.get('uemail')!.hasError('email') && formneg.get('uemail')!.touched">
+          Please enter a valid email address
+        </div>
 
-          <label for="message">Personal Message * -48</label>
-          <textarea class="form-control" id="message" name="message" placeholder="Enter your message here" formControlName="umessage"></textarea>
-          <div *ngIf="formneg.get('umessage')!.hasError('required') && formneg.get('umessage')!.touched" style="color:red">
-            Message is required
-          </div>
-          <div *ngIf="formneg.get('umessage')!.hasError('pattern') && formneg.get('umessage')!.touched" style="color: red;">
-            Please enter only letters, spaces, and punctuation marks
-          </div>
-          <div *ngIf="formneg.get('umessage')!.hasError('minlength') && formneg.get('umessage')!.touched" style="color: red;">
-            Message must be at least 5 characters long
-          </div>
-          <div *ngIf="formneg.get('umessage')!.hasError('maxlength') && formneg.get('umessage')!.touched" style="color: red;">
-            Message must not exceed 200 characters
-          </div>
-        </div>  
-      </div>
-    </div> 
-    <button class="btn btn-success btn-lg active" [disabled]="formneg.invalid" style="margin-top:2rem;width:15rem" (click)="userRegistrationValues()" routerLink="/paymentdetails" role="button" aria-pressed="true">ADD CART</button>
-  </div> 
+        <label for="message">Personal Message * -48</label>
+        <textarea class="form-control" id="message" name="message" placeholder="Enter your message here" formControlName="umessage"></textarea>
+        <!-- Error messages for message field -->
+        <div class="error-message" style="color:red" *ngIf="formneg.get('umessage')!.hasError('required') && formneg.get('umessage')!.touched">
+          Message is required
+        </div>
+        <div class="error-message" style="color:red" *ngIf="formneg.get('umessage')!.hasError('pattern') && formneg.get('umessage')!.touched">
+          Please enter only letters, spaces, and punctuation marks
+        </div>
+        <div class="error-message" style="color:red" *ngIf="formneg.get('umessage')!.hasError('minlength') && formneg.get('umessage')!.touched">
+          Message must be at least 5 characters long
+        </div>
+        <div class="error-message" style="color:red" *ngIf="formneg.get('umessage')!.hasError('maxlength') && formneg.get('umessage')!.touched">
+          Message must not exceed 200 characters
+        </div>
+
+        <button class="btn btn-success btn-lg active" [disabled]="formneg.invalid" style="margin-top:2rem;" (click)="userRegistrationValues()" routerLink="/paymentdetails" role="button" aria-pressed="true">ADD CART</button>
+      </div>  
+    </div>
+  </div>
 </div>

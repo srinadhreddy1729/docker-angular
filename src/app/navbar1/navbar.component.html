@@ -1,64 +1,99 @@
-<div class="home">
-  
+ <div class="home">
 
-  <div class="text">
-    <div class="cer-img-database">
-
-      <img 
-       class="banner-img v2" src="https://starregistration.net/skin/frontend/starregister/name-a-star_co_uk/images/new_banner_img_v4_mobile.webp" alt="Banner Certificates" width="620" height="500">
+<div class="text">
+  <div class="data-theory">
+    <p style="font-size: 24px;"><span style="color: yellowgreen;">BUY A STAR ONLINE</span> and get a Star Certificate</p>
+    <span class="part">
+      Name a star visible from <span style="color: brown;" *ngIf="countryData">{{ countryData.name.common }}
+        </span>, or any other preferred location. A star will be registered in the official star database with accurate coordinates, so you can always find it in the sky.
+    </span><br/>
+    <button routerLink="/order" type="button" class="btn btn-danger btn-lg p1-data">Name a Star</button>
+    <a href="#data-star"><button type="button" class="btn btn-secondary btn-lg p2-data">Watch Video</button></a>
+  </div>
+  <div class="cer-img-database">
+    <img class="banner-img v2" src="https://starregistration.net/skin/frontend/starregister/name-a-star_co_uk/images/new_banner_img_v4_mobile.webp" alt="Banner Certificates" width="560" height="500">
+  </div>
+</div>
+<section id="header" class="jumbotron text-center m-5">
+  <h1 class="display-3">STAR GALAXY</h1>
+  <p class="lead" style="color:#ffffff">Naming a star after someone or something can be a powerful symbol of remembrance, love, or celebration. It can serve as a lasting tribute and a reminder of special moments or individuals.</p>
+  <a routerLink="/order" class="btn btn-lg btn-success mr-2">Order Now</a>
+  <a routerLink="/order" class="btn btn-lg btn-primary">Order Now</a>
+</section>
+<div class="container">
+  <div class="card-database row justify-content-center">
+    <div class="col-md-6 col-lg-3 mb-4">
+      <div class="card bg-indigo text-white">
+        <div class="card-body">
+          <h5 class="card-title">FREE WORLDWIDE DELIVERY</h5>
+          <p class="card-text">Flexible shipping and delivery options</p>
+        </div>
+      </div>
     </div>
-<div class="data-theory" style="color:#fff">
-    <p style="font-size:52px; line-height:4rem;"><span style="color:yellowgreen;">BUY A STAR ONLINE</span>
-and get a Star Certificate
-</p>
-
-
-<span class="part">
-Name a star visible from <span style="color:brown;font-size:25px;">INDIA</span>, or any other preferred location.
- A star will be registered in the official star database with accurate coordinates, so you can always find it in the sky.
-</span><br/>
-<button routerLink="/drop"  style="margin-top:2rem;" type="button" class="btn btn-danger btn-lg p1-data">Name a Star</button>
-&nbsp;
-<a href="#data-star"><button type="button"  style="margin-top:2rem;" class="btn btn-secondary btn-lg p2-data">Watch Video</button></a>
-
-
+    <div class="col-md-6 col-lg-3 mb-4">
+      <div class="card bg-indigo text-white">
+        <div class="card-body">
+          <h5 class="card-title">ONLY VISIBLE STARS</h5>
+          <p class="card-text">We will select a star based on your location</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-3 mb-4">
+      <div class="card bg-indigo text-white">
+        <div class="card-body">
+          <h5 class="card-title">365-DAYS TO RETURN</h5>
+          <p class="card-text">Buy a star gift set with confidence</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-3 mb-4">
+      <div class="card bg-indigo text-white">
+        <div class="card-body">
+          <h5 class="card-title">BEST PRICE GUARANTEE</h5>
+          <p class="card-text">We guarantee the best value for the money</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
-</div>
-<div class="card-database">
-  
-    <div class="card card1" style="width: 20rem;background-color:rgb(81, 41, 109);">
-        <div class="card-body">
-          <h5 class="card-title" style="color:#fff">FREE WORLDWIDE DELIVERY</h5>
-          <p class="card-text"  style="color:#f0e9e9">Flexible shipping and delivery options
-        </p>
-        </div>
-      </div><div class="card" style="width: 20rem;background-color:rgb(81, 41, 109);">
-        <div class="card-body">
-          <h5 class="card-title" style="color:#fff">ONLY VISIBLE STARS        </h5>
-          <p class="card-text"  style="color:#f0e9e9">We will select a star based on your location
-        </p>
-        </div>
-      </div><div class="card" style="width: 20rem;background-color:rgb(81, 41, 109);">
-        <div class="card-body">
-          <h5 class="card-title" style="color:#fff">365-DAYS TO RETURN
-        </h5>
-          <p class="card-text"  style="color:#f0e9e9">Buy a star gift set with confidence
-        </p>
-        </div>
-      </div><div class="card" style="width: 20rem;background-color:rgb(81, 41, 109);">
-        <div class="card-body">
-          <h5 class="card-title" style="color:#fff">BEST PRICE GUARANTEE
-        </h5>
-          <p class="card-text" style="color:#f0e9e9">We guarantee the best value for the money
-        </p>
-        </div>
-
-</div>
-</div>
 
 <app-dropdowns></app-dropdowns>
 </div>
+
+  <p class="h1 text-center custom-heading text-primary" style=" text-decoration: underline;">WE RECEIVED EMAILS REGARDING OUR SERVICE</p>
+<div class="mini-container">
+  <div class="card-rs">
+    <p>Exceptional service! The team provided outstanding customer support, kept me updated throughout the process, and delivered both the digital and physical copies promptly. Highly recommend!</p>
+    <p class="author">John Doe</p>
+  </div>
+
+  <div class="card-rs">
+    <p>Dealing with this company was an absolute pleasure. They were proactive in providing delivery updates, and their customer service team was incredibly helpful and responsive. A great experience overall!</p>
+    <p class="author" >Jane Smith</p>
+  </div>
+
+  <div class="card-rs">
+    <p>My wife was overjoyed with her Christmas present! The star registration exceeded our expectations. Living in the countryside, she now enjoys gazing at her star every evening. Thank you for the magical experience!</p>
+    <p class="author">Michael Johnson</p>
+  </div>
+
+  <div class="card-rs">
+    <p>Naming a star after my late husband brought comfort to my daughter during a difficult time. The process was quick, convenient, and the service provided was exceptional. Thank you for helping us cherish his memory!</p>
+    <p class="author">Emily Brown</p>
+  </div>
+
+  <div class="card-rs">
+    <p>Impressive service at an unbeatable price! My partner was thrilled with the Valentine's Day gift. Easy to order and a truly unique gift idea. Thank you for making our celebration extra special!</p>
+    <p class="author">David Wilson</p>
+  </div>
+
+  <div class="card-rs">
+    <p>The star registration was a hit! My wife was pleasantly surprised and deeply touched by the thoughtful gesture. It's a gift that stands out and brings joy every time she looks up at the night sky. Thank you for the wonderful experience!</p>
+    <p class="author">Sarah Martinez</p>
+  </div>
+</div>
+
 
 <app-video></app-video>
 
@@ -69,30 +104,31 @@ Name a star visible from <span style="color:brown;font-size:25px;">INDIA</span>,
 
 
 
-<h1 class="title-bar" style="font-size: 4rem;color:#057dae">
-  About Star Registration
-</h1>
+
+
+  <p class="text-center h1 custom-heading text-primary" style="text-decoration: underline;">ABOUT STAR REGISTRATION</p>
 <div class="container" >
+
   <div class="section i1">
     <img class="lazyload" src="//www.star-registration.in/cdn/shop/t/28/assets/star.svg?v=145747914973074610631707906749" alt="Star icon" width="70" height="70">
     <div class="content">
-      <div class="heading"  style="font-size:2rem;color:#057dae;">Only visible stars</div>
-      <div class="text">At our star naming service, we take great care in selecting stars that are visible from your continent year-round. To ensure that, we'll ask for your location during the naming process. Our proprietary algorithm then ensures that you will get a star that is guaranteed visible!</div>
+      <div class="heading"  style="color:#057dae;">Only visible stars</div>
+      <div class="text texting">At our star naming service, we take great care in selecting stars that are visible from your continent year-round. To ensure that, we'll ask for your location during the naming process. Our proprietary algorithm then ensures that you will get a star that is guaranteed visible!</div>
     </div>
   </div>
   <div class="section i2">
     <img class="lazyload" src="//www.star-registration.in/cdn/shop/t/28/assets/registered.svg?v=43752538119125845721707906749" alt="Trademark Registered icon" width="70" height="70">
     <div class="content">
-      <div class="heading"  style="font-size:2rem;color:#057dae;">The Star Register</div>
-      <div class="text">We are proud to be the exclusive partner of Star-Register.com, the premier registry for naming stars. When you purchase a star with us, it will be registered on their platform, and you can access it anytime using their dedicated iOS and Android App.</div>
+      <div class="heading"  style="color:#057dae;">The Star Register</div>
+      <div class="text texting">We are proud to be the exclusive partner of Star-Register.com, the premier registry for naming stars. When you purchase a star with us, it will be registered on their platform, and you can access it anytime using their dedicated iOS and Android App.</div>
     </div>
   </div>
   <div class="section i3">
     <img class="lazyload" src="//www.star-registration.in/cdn/shop/t/28/assets/parachute.svg?v=66197217689237056331707906748" alt="Parachute with parcel icon" width="70" height="70">
 
     <div class="content i4">
-      <div class="heading"  style="font-size:2rem;color:#057dae;">Quick Delivery</div>
-      <div class="text">
+      <div class="heading"  style="color:#057dae;">Quick Delivery</div>
+      <div class="text texting">
           Thanks to our many years of experience and streamlined processes, we can quickly register your star and ship your documents within just 2 hours. And to make things even more convenient, we will also send your documents as a PDF in advance.
          </div>
     </div>
@@ -107,21 +143,13 @@ Name a star visible from <span style="color:brown;font-size:25px;">INDIA</span>,
       <img class="lazyload" src="//www.star-registration.in/cdn/shop/t/28/assets/headphones.svg?v=122077724091530129401707906749" alt="Headphones icon" width="70" height="70">
 
       <div class="content">
-        <div class="heading" style="font-size:2rem;color:#057dae;">5-Star Reviews</div>
-        <div class="text">We're proud to say our customers love us. The proof? Our 5-star reviews are through the roof. From our speedy delivery to our well visible stars and responsive customer service, our customers consistently appreciate the care we put into our service. Naming a star is a unique experience, and we're here to make it special for everyone.</div>
+        <div class="heading" style="color:#057dae;">5-Star Reviews</div>
+        <div class="text texting">We're proud to say our customers love us. The proof? Our 5-star reviews are through the roof. From our speedy delivery to our well visible stars and responsive customer service, our customers consistently appreciate the care we put into our service. Naming a star is a unique experience, and we're here to make it special for everyone.</div>
       </div>
     </div>
 </div>
-
-
-
-
-
-
-
-
 <div class="data-image d-1">
-  <img class="banner-img v2 d-2" style="margin-left:250px" src="https://starregistration.net/skin/frontend/starregister/name-a-star_co_uk/images/pdp/gift_package_v3_mobile.png" width="1200px" height="600px" alt="Gift Package" loading="lazy">
+  <img class=" d-2" style="margin-left:250px" src="https://starregistration.net/skin/frontend/starregister/name-a-star_co_uk/images/pdp/gift_package_v3_mobile.png" width="1200px" height="600px" alt="Gift Package" loading="lazy">
 </div>
 
 
@@ -134,7 +162,7 @@ Name a star visible from <span style="color:brown;font-size:25px;">INDIA</span>,
     <span class="star">&#x2605;</span>
     <span class="star">&#x2605;</span>
   </div>
-  <p>on Trustpilot</p>
+  <p class="mt-3">on Trustpilot</p>
 </div>
 
 <div class="middle-matter-1">
@@ -144,6 +172,5 @@ Name a star visible from <span style="color:brown;font-size:25px;">INDIA</span>,
 <app-middle></app-middle>
 <app-gallery></app-gallery>
 <app-whystarreg></app-whystarreg>
-<app-footer></app-footer>
 
 

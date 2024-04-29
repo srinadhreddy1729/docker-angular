@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
 import { SharedserviceService } from '../sharedservice.service';
 import { Router } from '@angular/router';
 import { FooterComponent } from '../footer/footer.component';
+import { Component, OnInit, Inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common'
 
 @Component({
   selector: 'app-header',
@@ -15,20 +16,20 @@ export class HeaderComponent {
   nav2Visible: boolean = false;
   nav3Visible: boolean = false;
 
-  constructor(private router: Router, private service: SharedserviceService) {}
+  constructor(
+    private router: Router,
+    private service: SharedserviceService,
+    @Inject(PLATFORM_ID) private platformId: Object
+  ) {}
 
+ 
   ngOnInit(): void {
     this.isLoggedIn = this.service.isAuthenticated();
-    this.checkScreenSize();
-    window.addEventListener('resize', () => {
-      this.checkScreenSize();
-    });
+    
+    
   }
 
-  checkScreenSize(): void {
-    this.isSmallScreen = window.innerWidth <= 900;
-  }
-
+  
   navigateToAccount(): void {
     if (this.isLoggedIn) {
       this.router.navigate(['/mydetails']);
@@ -37,15 +38,5 @@ export class HeaderComponent {
     }
   }
 
-    toggleNav2(): void {
-      console.log("Toggling Nav 2 visibility");
-      this.nav2Visible = !this.nav2Visible;
-    
-  }
-
-  toggleNav3(): void {
-    this.nav3Visible = !this.nav3Visible;
-  }
- 
-
+  
 }

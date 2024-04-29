@@ -9,14 +9,14 @@ import { Route, Router } from '@angular/router';
   styleUrl: './star-map-entry.component.css'
 })
 export class StarMapEntryComponent {
-   id:any='';
+  RegistryNumber:any='';
   constructor(private service:BackendServiceService,private toaster:ToastrService,private router:Router)
   {
 
   }
   submitForStarMap():void
   {
-this.service.gettingUserDataById(this.id).subscribe((data:any)=>{
+  this.service.gettingUserDataById(this.RegistryNumber).subscribe((data:any)=>{
   if(data.message==="valid id")
   {
 this.toaster.success("user credential correct...please wait some time")
@@ -27,8 +27,13 @@ console.log("done")
   {
     this.toaster.error("enter correct credential")
 
-
   }
+  else if(data.message==='RegistryNumber is required')
+    {
+      this.toaster.error('RegistryNumber is required');
+    }
+
+
 },
 err=>{});
   }

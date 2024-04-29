@@ -6,16 +6,7 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-/* .container-body{
 
-    background-color: #c9d6ff;
-    background: linear-gradient(to right, #e2e2e2, #c9d6ff);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    height: 100vh;
-} */
 
 .container{
     background-color: #fff;
@@ -214,18 +205,8 @@
 }
 
 
-.data1
-{
-    position: relative;
-    top:100px;
-    left:445px;
-}
-.container-body
-{
-    width:100%;
-    height:1000px;
-    /* background:linear-gradient(cyan,yellow,green); */
-}
+
+
 
 
 
@@ -311,12 +292,28 @@
   
 
 
-
-input.ng-touched.ng-invalid
+ input.ng-touched.ng-invalid
 {
   border: 2px solid red;
 }
 input.ng-touched.ng-valid
 {
   border:2px solid green;
+} 
+
+
+.container-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
 }
+
+.error-message {
+    color: red;
+    font-size: 12px;
+  }
+  
+ 
+  
+  

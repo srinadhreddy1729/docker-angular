@@ -1,10 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { FormsModule, NgModel } from '@angular/forms';
 import { WhystarregComponent } from './whystarreg/whystarreg.component';
 import { MenubarComponent } from './menubar/menubar.component';
 import { FindyoustarComponent } from './findyoustar/findyoustar.component';
@@ -19,11 +18,21 @@ import { CommonModule } from '@angular/common';
 import { StarregistartionComponent } from './starregistartion/starregistartion.component';
 import { PaymentDetailsComponent } from './payment-details/payment-details.component';
 import { ReviewsComponent } from '../../../ExampleForLearning/src/app/reviews/reviews.component';
-import { UniversalComponent } from './universal/universal.component';
 import { PaymentgatewayComponent } from './paymentgateway/paymentgateway.component';
 import { BoxComponent } from './box/box.component';
 import { StarMapComponent } from './star-map/star-map.component';
 import { StarMapEntryComponent } from './star-map-entry/star-map-entry.component';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import {MatError, MatFormField, MatInputModule, MatLabel} from '@angular/material/input';
+import { PayPaymentComponent } from './pay-payment/pay-payment.component';
+import { GeneralTermsComponent } from './general-terms/general-terms.component';
+import { StraCertificateComponent } from './stra-certificate/stra-certificate.component';
+import { HowManyStarsareInnasadatabaseComponent } from './how-many-starsare-innasadatabase/how-many-starsare-innasadatabase.component';
+import { ZodiacComponent } from './zodiac/zodiac.component';
+import { ContinueShoppingComponent } from './continue-shopping/continue-shopping.component';
+import { TermsandconditionComponent } from './termsandcondition/termsandcondition.component';
+import { RefundpolicyComponent } from './refundpolicy/refundpolicy.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,11 +46,18 @@ import { StarMapEntryComponent } from './star-map-entry/star-map-entry.component
     StarregistartionComponent,
     PaymentDetailsComponent,
     ReviewsComponent,
-    UniversalComponent,
     PaymentgatewayComponent,
     BoxComponent,
     StarMapComponent,
-    StarMapEntryComponent
+    StarMapEntryComponent,
+    PayPaymentComponent,
+    GeneralTermsComponent,
+    StraCertificateComponent,
+    HowManyStarsareInnasadatabaseComponent,
+    ZodiacComponent,
+    ContinueShoppingComponent,
+    TermsandconditionComponent,
+    RefundpolicyComponent
      ],
   imports: [
     BrowserModule,
@@ -49,12 +65,24 @@ import { StarMapEntryComponent } from './star-map-entry/star-map-entry.component
     FormsModule,ToastrModule.forRoot(),
     ReactiveFormsModule,
     FormsModule,
-        CommonModule,
+    CommonModule
+    
+        
         
 
   ],
   providers: [
-    provideClientHydration()
+    
+    provideClientHydration(),
+          provideAnimationsAsync()
+  //   ,
+  //   {
+  //   provide: HTTP_INTERCEPTORS,
+  //   useValue: tokenInterceptorInterceptor,
+  //   multi: true
+  // }
+    
+    
   ],
   bootstrap: [AppComponent]
 })

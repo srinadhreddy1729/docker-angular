@@ -1,7 +1,7 @@
 import { Component, NgModule } from '@angular/core';
 import { BackendServiceService } from '../backend-service.service';
 import { FormGroup, FormsModule, NgModel, ReactiveFormsModule } from '@angular/forms';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { NgForm } from '@angular/forms';
 import { FormBuilder } from '@angular/forms';
 import { Validators } from '@angular/forms';
@@ -11,7 +11,7 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [FormsModule,ReactiveFormsModule,CommonModule],
+  imports: [FormsModule,ReactiveFormsModule,CommonModule,RouterModule],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.css'
 })

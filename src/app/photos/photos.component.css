@@ -3,9 +3,44 @@
 .container {
     max-width: 100%;
     padding: 20px;
-
+  }
+  .top-head-1
+  {
+    display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
 
   }
+  .top-theory
+  {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+
+  }
+  .bottom-theory-1
+  {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+
+  }
+  .top-image img
+    {
+      width:60%;
+    }
+    .top-image
+    {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
   
   .table-wrapper {
     overflow-x: auto;
@@ -57,30 +92,22 @@
   }
 @media only screen and (max-width:900px) {
 
-  .top-image img
-    {
-      width:44rem;
-      height:35rem;
-      margin-left:2rem;
-    }
+  
+    
 }
 
 
   @media only screen and (max-width:780px) {
-    .container {
-      overflow-x: auto;
-      
-    }
-
+    
     .table {
       display: block;
       width: 100%;
     }
-    .top-image img
-    {
-      width:35rem;
-      height:30rem;
+    .table {
+      display: block;
+      width: 100%;
     }
+    
 
     .header th,
     .table td {
@@ -88,4 +115,7 @@
       padding: 6px;
     }
   }
-  
+   
+
+   
+   

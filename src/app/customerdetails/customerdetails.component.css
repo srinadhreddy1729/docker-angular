@@ -1,70 +1,91 @@
-.container {
+
+  
+  .container {
     width: 80%;
     margin: 0 auto;
-  }
-  
-  h1 {
+}
+
+h1 {
     text-align: center;
-  }
-  
-  img {
-    width: 100%;
+}
+h6{
+    font-size: 16px;
+    font-weight: bold;
+
+}
+img {
+    max-width: 100%;
     height: auto;
-  }
-  
-  .polaroid {
+}
+
+.polaroid {
     background-color: white;
     padding: 20px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  }
-  
-  .figure {
+}
+
+.figure {
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-  
-  .figcaption {
+}
+
+.figcaption {
     margin-top: 10px;
     font-style: italic;
-  }
-  
-  .grid {
+}
+
+.grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 20px;
-  }
-  
-  .grid-item {
+}
+
+.grid-item {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-  }
-  
-  .grid-item h3 {
+}
+
+.grid-item h3 {
     margin: 0;
-  }
-  
-  .grid-item p {
+}
+
+.grid-item p {
     margin: 10px 0;
-  }
-  
-  .grid-item a {
+}
+
+.grid-item a {
     color: blue;
     text-decoration: none;
-  }
-  
-  .grid-item a:hover {
+}
+
+.grid-item a:hover {
     text-decoration: underline;
-  }
-  
-  .footer {
+}
+
+.footer {
     margin-top: 20px;
     padding: 10px;
     background-color: lightgray;
     text-align: center;
-  }
-  
-  .footer p {
+}
+
+.footer p {
     margin: 0;
+}
+@media screen and (max-width: 600px) {
+    .container {
+      width: 100%; 
+    }
+    .grid-item {
+        width: 100%; 
+      }
+    .grid {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    }
+  
+  h6 {
+    font-size: 14px; 
   }
+}

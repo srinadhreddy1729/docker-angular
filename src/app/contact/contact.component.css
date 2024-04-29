@@ -66,7 +66,7 @@
   .contact-info button {
     display: block;
     margin-top: 10px;
-    padding: 10px;
+    padding: 1px;
     background-color: #000;
     color: white;
     border: none;
@@ -192,3 +192,11 @@ button:active{
     margin-bottom: 20px;
   }
 }
+
+
+li a{
+text-decoration:none;
+}
+
+
+

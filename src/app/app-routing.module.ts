@@ -5,7 +5,6 @@ import { PhotosComponent } from './photos/photos.component';
 import { ShootingStarComponent } from './shooting-star/shooting-star.component';
 import { GalaxyComponent } from './galaxy/galaxy.component';
 import { ContactComponent } from './contact/contact.component';
-import { MyAccountComponent } from './my-account/my-account.component';
 import { FooterComponent } from './footer/footer.component';
 import { DropdownsComponent } from './dropdowns/dropdowns.component';
 import { VideoComponent } from './video/video.component';
@@ -24,20 +23,33 @@ import { HeaderComponent } from './header/header.component';
 import { SignoutComponent } from './signout/signout.component';
 import { StarregistartionComponent } from './starregistartion/starregistartion.component';
 import { PaymentDetailsComponent } from './payment-details/payment-details.component';
-import { UniversalComponent } from './universal/universal.component';
 import { PaymentgatewayComponent } from './paymentgateway/paymentgateway.component';
 import { BoxComponent } from './box/box.component';
 import { ReviewsComponent } from '../../../ExampleForLearning/src/app/reviews/reviews.component';
 import { StarMapEntryComponent } from './star-map-entry/star-map-entry.component';
 import { StarMapComponent } from './star-map/star-map.component';
+import { MenubarComponent } from './menubar/menubar.component';
+import { PayPaymentComponent } from './pay-payment/pay-payment.component';
+import { GeneralTermsComponent } from './general-terms/general-terms.component';
+import { StraCertificateComponent } from './stra-certificate/stra-certificate.component';
+import { HowManyStarsareInnasadatabaseComponent } from './how-many-starsare-innasadatabase/how-many-starsare-innasadatabase.component';
+import { ZodiacComponent } from './zodiac/zodiac.component';
+import { ContinueShoppingComponent } from './continue-shopping/continue-shopping.component';
+import { authGuard } from './auth.guard';
+import { RefundpolicyComponent } from './refundpolicy/refundpolicy.component';
+import { TermsandconditionComponent } from './termsandcondition/termsandcondition.component';
 
 
 const routes: Routes = [
-  {
-    path:'',component:NavbarComponent
+      {
+       path:'',component:NavbarComponent
       },
       {
-        path:'table',component:PhotosComponent
+        path:'constellation-table',component:PhotosComponent
+      },
+      
+      {
+        path:'menu',component:MenubarComponent
       },
       {
         path:'shooting-star',component:ShootingStarComponent
@@ -51,13 +63,13 @@ const routes: Routes = [
     
     },
     {
-    path:'contact',component:ContactComponent
+     path:'contact',component:ContactComponent
     },
     {
-      path:'navbar',component:NavbarComponent
+      path:'home',component:NavbarComponent
      },
      {
-      path:'MyAccount',component:MyAccountComponent
+      path:'MyAccount',component:BoxComponent
     
     },
     {
@@ -68,7 +80,7 @@ const routes: Routes = [
       path:'footer',component:FooterComponent
     },
     {
-      path:'drop',component:DropdownsComponent
+      path:'order',component:DropdownsComponent
     
     },
     {
@@ -79,6 +91,14 @@ const routes: Routes = [
     },
     {
       path:'mail',component:MailComponent
+    },
+    {
+      path:'refund-policy',component:RefundpolicyComponent
+
+    },
+    {
+      path:'terms-and-conditions',component:TermsandconditionComponent
+
     }
     ,
     {
@@ -102,7 +122,7 @@ const routes: Routes = [
     }
     ,
     {
-      path:'mydetails',component:CustomerdetailsComponent
+      path:'mydetails',component:CustomerdetailsComponent,canActivate:[authGuard]
     },
     {
       path:"edit",component:EditDetailsComponent
@@ -119,22 +139,40 @@ const routes: Routes = [
     {
       path:'StarMap',component:StarMapComponent
     },
-    {
-      path:'universal',component:UniversalComponent
-    },
+    
     {
       path:'paymentgateway',component:PaymentgatewayComponent
 
     },
     {
-path:'StarMapEntry',component:StarMapEntryComponent
+     path:'StarMapEntry',component:StarMapEntryComponent
+    },
+    {
+      path:'review',component:ReviewsComponent
+    },
+    {
+      path:'paypayment',component:PayPaymentComponent
+    },
+    {
+      path:'generalterms',component:GeneralTermsComponent
+    },
+    {
+      path:'starcertificate',component:StraCertificateComponent
+    },
+    {
+      path:'how-many-stars-are-in-nasa-database',component:HowManyStarsareInnasadatabaseComponent
+    },
+    {
+      path:'zodiac',component:ZodiacComponent
     },
     {
       path:'box',component:BoxComponent
     },
     {
-      path:'review',component:ReviewsComponent
+      path:'continue-shopping',component:ContinueShoppingComponent
     }
+    
+    
 ];
 
 @NgModule({
