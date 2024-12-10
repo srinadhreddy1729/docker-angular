@@ -26,7 +26,7 @@ constructor( @Inject(PLATFORM_ID) private platformId: Object){}
  ];
  selectedImage: { src: string, text: string } | null =  {src: "./assets/Task@star-registration.in/certificate-3.png",text:''}
  clickedImageSrc: string | null = null;
- customText: string = ''; 
+ customText: string = '';
 imagepath:any=this.selectedImage?.src;
  showImage(imageData: { src: string, text: string }) {
    this.selectedImage = imageData;
@@ -37,7 +37,7 @@ imagepath:any=this.selectedImage?.src;
 
  hideImage() {
    this.selectedImage = null;
-   this.clickedImageSrc = null; 
+   this.clickedImageSrc = null;
  }
 
 
@@ -46,8 +46,8 @@ formneg = new FormGroup({
  uname: new FormControl("", [
    Validators.required,
    Validators.pattern(/^[A-Za-z\s]+$/),
-   Validators.minLength(3), 
-   Validators.maxLength(30), 
+   Validators.minLength(3),
+   Validators.maxLength(30),
  ]),
  uemail: new FormControl("", [
   Validators.required,
@@ -55,8 +55,8 @@ formneg = new FormGroup({
 ]),
  umessage: new FormControl("", [
    Validators.required,
-   Validators.minLength(5), 
-   Validators.maxLength(200), 
+   Validators.minLength(5),
+   Validators.maxLength(200),
  ]),
  udate: new FormControl('', [
    Validators.required,
@@ -74,7 +74,7 @@ formneg = new FormGroup({
      useremail:this.formneg.get('uemail')!.value,
      imagesrc:this.imagepath
                 }
-                
+
       localStorage.setItem('userRegistrationData',JSON.stringify(formValues))
 
    }
