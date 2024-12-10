@@ -118,7 +118,6 @@ export class ProductComponent {
     //   this.total_products = data;
     // });
     this.total_products=this.products
-    console.log(this.products)
   }
 
   public addTocartPage(product: any) {
