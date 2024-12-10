@@ -1,0 +1,49 @@
+<div class="container-fluid mt-4">
+    <div *ngIf="cartLength>0">
+        <p class="fs-5 text-danger">Your Cart</p>
+<div class="row">
+    <div *ngFor="let item of cartItems" class=" col-sm-12 col-md-6 " >
+      <div class="card mt-4 rounded-4">
+        <img [src]="item.product_image"  class="card-img-top"/>
+          <div class="card-body">
+            <p class="card-title">
+              {{ item.product_name }} ({{ item.product_quantity }} x {{ item.product_discount_cost | currency: 'INR' }})
+            </p>
+            <hr class="bg-dark" />
+            <p class="card-title">
+              Total: {{ item.product_discount_cost * item.product_quantity | currency: 'INR' }}
+            </p>
+            <p class="card-title" >
+                 ({{ item.product_quantity }} x {{ item.product_discount_cost | currency: 'INR' }})
+              </p>
+            <button class="btn btn-danger" (click)="removeFromCart(item.product_id)">
+              Remove
+            </button>
+            <button class="btn btn-sm btn-danger ms-4 custom-width" (click)="decreaseProductQuantity(item.product_id)">
+            <span class="text-center ">-</span>
+              </button>
+            
+              <button class="btn btn-sm btn-success ms-1 custom-width" (click)="increaseProductQuantity(item.product_id)">
+                <span class="text-center ">+</span>
+
+              </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <hr class="bg-dark" />
+    <div class="text-end">
+      <p class="fs-4">Total: {{ getTotalPrice() | currency: 'INR' }}</p>
+    </div>
+</div>
+<div *ngIf="cartLength<=0">
+<div class="text-center h2 text-decoration-underline"> your cart is empty
+
+<div>
+    <img class="text-center" src="../../assets/Task@star-registration.in/sad.png" width="200px" height="200px"/>
+</div>
+
+</div>
+</div>
+  </div>

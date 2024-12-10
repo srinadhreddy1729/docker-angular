@@ -1,4 +1,4 @@
-<p style="text-decoration: underline;color:#34174e" class="h1 text-center custom-heading">OUR PACKAGES</p>
+<!-- <p style="text-decoration: underline;color:#34174e" class="h1 text-center custom-heading">OUR PACKAGES</p>
 
 <div class="parent-frame">
 <div class="data-f1-1">
@@ -14,7 +14,7 @@
       <div class="card-body">
         <p>This package allows you to name a star that is visible in your area.</p>
         <ul *ngFor="let name3 of nameOption3;let i=index">
-          
+
           <li>{{name3.key}}</li>
           <span *ngIf="i>=nameOption3.length-2">
             </span>
@@ -41,9 +41,9 @@
       <div class="card-body">
         <p>This package allows you to name a star that is visible in your area.</p>
         <ul *ngFor="let name1 of nameOption1">
-          
+
           <li>{{name1.key}}</li>
-        </ul> 
+        </ul>
       </div>
       <div class="card-footer">
         <button class="order-button btn" (click)="Frame2()" routerLink="/star-registration">ORDER NOW</button>
@@ -80,7 +80,7 @@
 
 </div>
 
- 
+<app-product></app-product>
 
 
 
@@ -101,4 +101,141 @@
 
 
 
-  
+   -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <p style="text-decoration: underline;color:#34174e" class="h1 text-center custom-heading">OUR PACKAGES</p>
+
+   <div class="parent-frame">
+     <div class="data-f1-1">
+       <div class="card">
+         <div class="card-content">
+           <div class="card-header">
+             <div class="galaxy-background1"></div>
+
+             <h2>BIRTHDAY MIRROR CARD</h2>
+             <p class="price"><span class="original-price">₹3,386.70</span> ₹1999.00</p>
+             <p class="offer">Limited Offer: One Free Gift Included</p>
+           </div>
+           <div class="card-body">
+             <p>This package includes our unique Happy Birthday Mirror Card. A special gift designed to surprise and delight your loved ones, featuring a reflective surface </p>
+             <ul>
+               <li>Personalized Birthday Message</li>
+               <li>High-Quality Mirror Finish</li>
+               <li>Compact and Elegant Design</li>
+             </ul>
+           </div>
+           <div class="card-footer">
+             <button class="order-button btn" (click)="Frame1()" routerLink="/star-registration">ORDER NOW</button>
+             <p class="delivery">ESTIMATED DELIVERY: {{desireDate}}</p>
+           </div>
+         </div>
+       </div>
+     </div>
+
+     <div class="data-f1-2">
+       <div class="card">
+         <div class="card-content">
+           <div class="card-header">
+             <div class="galaxy-background2"></div>
+
+             <h2>TED TALKS COLLECTION</h2>
+             <p class="price"><span class="original-price">₹4,276.70</span> ₹2999.00</p>
+             <p class="offer">Limited Offer: One Free Gift Included</p>
+           </div>
+           <div class="card-body">
+             <p>This package offers access to an exclusive Ted Talks Collection, filled with thought-provoking and inspiring talks from some of the world’s best speakers. Perfect for expanding your knowledge.</p>
+             <ul>
+               <li>Access to a curated collection of Ted Talks</li>
+               <li>Inspiring and Educational Content</li>
+               <li>Perfect for self-improvement and learning</li>
+             </ul>
+           </div>
+           <div class="card-footer">
+             <button class="order-button btn" (click)="Frame2()" routerLink="/star-registration">ORDER NOW</button>
+             <p class="delivery">ESTIMATED DELIVERY: {{desireDate}}</p>
+           </div>
+         </div>
+       </div>
+     </div>
+
+     <div class="data-f1-3">
+       <div class="card">
+         <div class="card-content">
+           <div class="card-header">
+             <div class="galaxy-background3"></div>
+
+             <h2>BEST FRIEND MEDAL</h2>
+             <p class="price"><span class="original-price">₹7,545.00</span> ₹4999.00</p>
+             <p class="offer">Limited Offer: One Free Gift Included</p>
+           </div>
+           <div class="card-body">
+             <p>This package includes the Best Friend Medal, a beautifully crafted medal that celebrates the bond of friendship. A perfect gift to honor your best friend on any occasion.</p>
+             <ul>
+               <li>Premium Quality Medal</li>
+               <li>Perfect for Celebrating Friendships</li>
+               <li>Customizable with a Personalized Message</li>
+             </ul>
+           </div>
+           <div class="card-footer">
+             <button class="order-button btn" (click)="Frame3()" routerLink="/star-registration">ORDER NOW</button>
+             <p class="delivery">ESTIMATED DELIVERY: {{desireDate}}</p>
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+
+
+
+   <app-product></app-product>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

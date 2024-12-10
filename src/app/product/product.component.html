@@ -1,0 +1,46 @@
+<div class="container mt-4">
+  <p class="fs-5 text-danger text-decoration-underline" id="custom-font">
+    Best Products From Us
+  </p>
+  <div class="row">
+    <div *ngFor="let product of total_products" class="col-sm-4 col-md-3">
+      <div class="card mt-4 rounded-4">
+        <div class="card-body">
+          <p class="card-title text-center fw-bold">
+            {{ product.product_name }}
+          </p>
+          <hr class="bg-dark" />
+
+          <img
+            class="card-img-top"
+            [src]="product.product_image_url"
+            width="50px"
+            height="140px"
+            alt="data.jpg"
+          />
+          <div class="card-text">
+            {{ product.product_description }}
+          </div>
+          <hr class="bg-dark" />
+          <div>
+            <p class="fs-5">
+              {{ product.product_discount_cost | currency : "INR" }}
+              <span class="fs-6"
+                ><mark class="text-decoration-line-through">{{
+                  product.product_original_cost | currency : "INR"
+                }}</mark></span
+              >
+            </p>
+          </div>
+          <div>
+            <hr class="bg-dark" />
+
+            <button class="btn btn-primary" (click)="addTocartPage(product)">
+              add cart
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

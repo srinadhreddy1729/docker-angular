@@ -1,4 +1,4 @@
-
+<!--
   <div class="container">
     <div class="whystar">
         <h1 class="text-primary custom-heading" style="text-decoration: underline;">WHY STAR REGISTRATION</h1>
@@ -10,21 +10,20 @@
       </div>
 
       <div class="star-card">
-        <div class="center-content"> <!-- Wrap content in a div with text-align: center -->
+        <div class="center-content">
           <span style="font-weight: bolder; font-size: 1.2rem">Good to know</span><br/>
           <img src="../../assets/Task@star-registration.in/star.jpg" alt="star image">
           If you decide to name a star with us, you can rest assured that it will be clearly visible from your given country and even continent and more...!
         </div>
       </div>
 
-      <!-- <div style="width: 80%; font-size: 1.2rem; margin: 0 auto; " class="text-center"> -->
         <div class="text-center" >
         <span style="color: #057dae; "  class="data">Star Finder App</span><br/><br/>
         Together with astronomers, mathematicians, and app developers, we created an app that calculates the position of your named star at any given time, no matter where in the world you are!
       </div>
 
       <div class="star-card">
-        <div class="center-content "> <!-- Wrap content in a div with text-align: center -->
+        <div class="center-content ">
           <span style="font-weight: bolder;font-size: 1.2rem">Choose an expert</span><br/>
           <img src="../../assets/Task@star-registration.in/star.jpg" alt="star image">
           We are experts in naming stars with positive mails! Our dedication to precision and customer satisfaction sets us apart in the industry
@@ -37,7 +36,7 @@
       </div>
 
       <div class="star-card">
-        <div class="center-content"> <!-- Wrap content in a div with text-align: center -->
+        <div class="center-content">
           <span style="font-weight: bolder; font-size: 1.2rem;">Helpful information</span><br/>
           <img src="../../assets/Task@star-registration.in/star.jpg" alt="star image">
           After buying a star, you can download our app. It will help you and the recipient of the gift to locate the named star at any given time and location.
@@ -103,7 +102,102 @@
       </div>
     </div>
   </div>
-  
+
+  <app-footer></app-footer>
+
+
+   -->
+
+   <div class="container">
+    <div class="whystar">
+        <h1 class="text-primary custom-heading" style="text-decoration: underline;">WHY OUR PRODUCT</h1>
+
+        <div class="text-center">
+          <span style="color: #057dae;" class="data">Guaranteed Quality</span><br/><br/>
+          We work with top engineers and developers to ensure our product meets the highest standards and delivers exceptional performance.
+        </div>
+
+        <div class="star-card">
+          <div class="center-content">
+            <span style="font-weight: bolder; font-size: 1.2rem">Good to know</span><br/>
+            <img src="../../assets/Task@star-registration.in/star.jpg" alt="Product image">
+            When you purchase our product, you can be sure of its reliability and durability for long-term use. It’s designed for ultimate efficiency!
+          </div>
+        </div>
+
+        <div class="text-center">
+          <span style="color: #057dae;" class="data">Product Finder App</span><br/><br/>
+          Our dedicated app helps you locate and track the product in real time, offering detailed insights and guides on its usage at any time.
+        </div>
+
+        <div class="star-card">
+          <div class="center-content">
+            <span style="font-weight: bolder; font-size: 1.2rem">Choose the Experts</span><br/>
+            <img src="../../assets/Task@star-registration.in/star.jpg" alt="Experts image">
+            We are experts in designing products that solve real-world problems. Our team ensures precision and delivers exceptional products with a focus on customer satisfaction.
+          </div>
+        </div>
+
+        <div class="text-center">
+          <span style="color: #057dae;" class="data">We are Experienced</span><br/><br/>
+          Our team has years of experience in crafting high-quality products. From design to delivery, we adhere to the best practices and top-notch standards.
+        </div>
+
+        <div class="star-card">
+          <div class="center-content">
+            <span style="font-weight: bolder; font-size: 1.2rem;">Helpful Information</span><br/>
+            <img src="../../assets/Task@star-registration.in/star.jpg" alt="Product support image">
+            After purchasing the product, you can access our exclusive app to guide you through setup, usage, and any other inquiries you may have.
+          </div>
+        </div>
+    </div>
+  </div>
+
+  <p class="text-center h1 custom-heading text-primary mb-5" style="text-decoration: underline;">FREQUENTLY ASKED QUESTIONS</p>
+
+  <div class="container px-md-5" id="question">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-8 col-lg-6">
+        <div class="form-group text-center">
+          <div class="d-flex align-items-center justify-content-between">
+            <label for="question1" class="question-label">Can I purchase this product?</label>
+            <button id="question1" class="question-button" (click)="toggleAnswer('question1')">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </div>
+          <p id="question-answer1" class="answer-text" *ngIf="showAnswer && currentQuestion === 'question1'">
+            Yes, the product is available for purchase directly from our website. We offer worldwide shipping with customer satisfaction guaranteed.
+          </p>
+          <hr class="question-line">
+        </div>
+        <div class="form-group text-center">
+          <div class="d-flex align-items-center justify-content-between">
+            <label for="question2" class="question-label">How do I use the product?</label>
+            <button id="question2" class="question-button" (click)="toggleAnswer('question2')">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </div>
+          <p id="question-answer2" class="answer-text" *ngIf="showAnswer && currentQuestion === 'question2'">
+            Our product comes with a detailed user guide and an easy-to-follow setup process. Additionally, our app provides interactive help to assist you along the way.
+          </p>
+          <hr class="question-line">
+        </div>
+        <div class="form-group text-center">
+          <div class="d-flex align-items-center justify-content-between">
+            <label for="question3" class="question-label">Why should I buy this product?</label>
+            <button id="question3" class="question-button" (click)="toggleAnswer('question3')">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </div>
+          <p id="question-answer3" class="answer-text" *ngIf="showAnswer && currentQuestion === 'question3'">
+            This product is designed to simplify your life by offering advanced features, ease of use, and long-lasting reliability. It’s the perfect solution for everyday needs.
+          </p>
+          <hr class="question-line">
+        </div>
+      </div>
+    </div>
+  </div>
+
   <app-footer></app-footer>
 
 
@@ -125,4 +219,4 @@
 
 
 
-  
+

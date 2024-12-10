@@ -44,19 +44,26 @@ this.service.Resetpassword(name,newpassword).subscribe((data:any)=>
 if(data.message==="Password reset successfully")
 {
 this.toaster.success("Password reset successfully")
+this.ResetDetails.reset();
 }
 else if(data.message==="User not found")
 {
   this.toaster.error("User not found")
+  this.ResetDetails.reset();
+
  
 }
 else if(data.error==="Failed to reset password")
   {
     this.toaster.error("Failed to reset password")
+    this.ResetDetails.reset();
+
   }
 else if(data.message==="Password has already been reset to the same value")
 {
   this.toaster.error("Password has already been reset to the same value")
+  this.ResetDetails.reset();
+
 
 }
 },err=>{})

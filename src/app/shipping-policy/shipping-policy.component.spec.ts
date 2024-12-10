@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GeneralTermsComponent } from './general-terms.component';
+import { ShippingPolicyComponent } from './shipping-policy.component';
 
-describe('GeneralTermsComponent', () => {
-  let component: GeneralTermsComponent;
-  let fixture: ComponentFixture<GeneralTermsComponent>;
+describe('ShippingPolicyComponent', () => {
+  let component: ShippingPolicyComponent;
+  let fixture: ComponentFixture<ShippingPolicyComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [GeneralTermsComponent]
+      declarations: [ShippingPolicyComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(GeneralTermsComponent);
+    fixture = TestBed.createComponent(ShippingPolicyComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

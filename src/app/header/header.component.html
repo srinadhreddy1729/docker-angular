@@ -2,7 +2,7 @@
 <nav class="navbar navbar-expand-lg navbar-custom1">
   <div class="container">
     <span class="navbar-text mx-auto h6">
-      SUMMER SEASON SALE: 37% OFF EVERYTHING
+      WINTER SEASON SALE: 27% OFF EVERYTHING
     </span>
   </div>
 </nav>
@@ -10,7 +10,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
   <div class="container">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <i class="fas fa-bars"></i> 
+      <i class="fas fa-bars"></i>
     </button>
     <a class="navbar-brand" href="#">AnyStarRegistration.com</a>
 
@@ -24,17 +24,24 @@
         </li>
         <li class="nav-item">
           <a (click)="navigateToAccount()" class="nav-link hover-effect">{{ isLoggedIn ? 'My Profile' : 'My Account' }}</a>
-
         </li>
         <li class="nav-item">
           <a class="nav-link hover-effect" routerLink="/contact">Contact</a>
         </li>
+
         <li class="nav-item">
-          <a class="nav-link hover-effect" routerLink="/StarMapEntry">Find Your Star</a>
+          <a class="nav-link" routerLink="/cart">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </a>
         </li>
+
+        <!-- <li class="nav-item">
+          <a class="nav-link hover-effect" routerLink="/StarMapEntry">Find Your Star</a>
+        </li> -->
         <li class="nav-item">
           <a class="nav-link btn btn-success btn-lg ml-2 " routerLink="/order">Buy Now</a>
         </li>
+
       </ul>
     </div>
   </div>

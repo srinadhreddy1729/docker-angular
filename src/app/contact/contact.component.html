@@ -4,7 +4,7 @@
         <div class="services-support">
           <h3>MORE SERVICES AND SUPPORT</h3>
           <ul style="font-size:18px;">
-            <li ><a routerLink="/StarMapEntry">Find Your Star</a></li>
+            <!-- <li ><a routerLink="/StarMapEntry">Find Your Star</a></li> -->
             <li><a routerLink="/">Track Your Order/PDF</a></li>
             <li><a href="#question" >Frequently Asked Questions</a></li>
             <li><a routerLink="/MyAccount">The Register</a></li>
@@ -12,7 +12,7 @@
             <li><a routerLink="/">Store Info</a></li>
             <li><a routerLink="/">Print Quality</a></li>
             <li><a routerLink="/">Reviews</a></li>
-            <li><a routerLink="/generalterms">General Terms</a></li>
+            <li><a routerLink="/shipping-policy">Shipping-Policy</a></li>
             <li ><a routerLink="/refund-policy">Refund Policy</a></li>
           </ul>
         </div>
@@ -24,7 +24,7 @@
      <div class="contact-form">
       <h3>CONTACT US</h3>
       <form #emailForm="ngForm" (ngSubmit)="sendEmail()">
-      
+
         <label for="name">Name *</label>
         <input type="text" id="name" placeholder="Name" name="name" [(ngModel)]="emailData.name" required #nameInput="ngModel">
         <div *ngIf="nameInput.invalid && (nameInput.dirty || nameInput.touched)" class="error" style="color: red;">
@@ -36,27 +36,27 @@
           <div *ngIf="emailInput.errors?.['required']">Email is required.</div>
           <div *ngIf="emailInput.errors?.['email']">Please enter a valid email address.</div>
         </div>
-        
+
         <label for="subject">Subject *</label>
         <input type="text" id="subject" [(ngModel)]="emailData.subject" placeholder="Subject" name="subject" required #subjectInput="ngModel">
         <div *ngIf="subjectInput.invalid && (subjectInput.dirty || subjectInput.touched)" class="error" style="color: red;">
           <div *ngIf="subjectInput.errors?.['required']">Subject is required.</div>
         </div>
-        
+
         <label for="comment">Comment *</label>
         <textarea id="comment" [(ngModel)]="emailData.text" cols="50px" rows="5px" name="comment" placeholder="Comment" required #commentInput="ngModel"></textarea>
         <div *ngIf="commentInput.invalid && (commentInput.dirty || commentInput.touched)" class="error" style="color: red;">
           <div *ngIf="commentInput.errors?.['required']">Comment is required.</div>
         </div>
-        
+
         <label for="newsletter" style="font-size:22px;font-weight:50px;">SUBSCRIBE TO NEWSLETTER &nbsp;&nbsp;<input style="width:30px;height:25px;" type="checkbox" id="newsletter" name="newsletter">
         </label>
-        
+
         <button type="submit" [disabled]="emailForm.invalid">SEND</button>
-      </form> 
+      </form>
     </div>
-    
-    
+
+
 
 
     <div class="contact-info">
@@ -78,12 +78,12 @@
             <span class="text">FACEBOOK</span>
           </a>
         </div>
-       
+
       </div>
     </div>
-  
+
   </div>
- 
+
 </div>
 
 

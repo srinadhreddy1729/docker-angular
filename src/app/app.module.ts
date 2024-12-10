@@ -25,13 +25,16 @@ import { StarMapEntryComponent } from './star-map-entry/star-map-entry.component
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import {MatError, MatFormField, MatInputModule, MatLabel} from '@angular/material/input';
 import { PayPaymentComponent } from './pay-payment/pay-payment.component';
-import { GeneralTermsComponent } from './general-terms/general-terms.component';
 import { StraCertificateComponent } from './stra-certificate/stra-certificate.component';
 import { HowManyStarsareInnasadatabaseComponent } from './how-many-starsare-innasadatabase/how-many-starsare-innasadatabase.component';
 import { ZodiacComponent } from './zodiac/zodiac.component';
 import { ContinueShoppingComponent } from './continue-shopping/continue-shopping.component';
 import { TermsandconditionComponent } from './termsandcondition/termsandcondition.component';
 import { RefundpolicyComponent } from './refundpolicy/refundpolicy.component';
+import { AboutusComponent } from './aboutus/aboutus.component';
+import { ShippingPolicyComponent } from './shipping-policy/shipping-policy.component';
+import { AddtocartComponent } from './addtocart/addtocart.component';
+import { ProductComponent } from './product/product.component';
 
 @NgModule({
   declarations: [
@@ -51,14 +54,16 @@ import { RefundpolicyComponent } from './refundpolicy/refundpolicy.component';
     StarMapComponent,
     StarMapEntryComponent,
     PayPaymentComponent,
-    GeneralTermsComponent,
     StraCertificateComponent,
     HowManyStarsareInnasadatabaseComponent,
     ZodiacComponent,
     ContinueShoppingComponent,
     TermsandconditionComponent,
-    RefundpolicyComponent
-     ],
+    RefundpolicyComponent,
+    AboutusComponent,
+    ShippingPolicyComponent,
+    AddtocartComponent,
+       ],
   imports: [
     BrowserModule,
     AppRoutingModule,HttpClientModule,

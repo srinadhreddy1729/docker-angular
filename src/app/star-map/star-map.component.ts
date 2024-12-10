@@ -90,7 +90,7 @@ export class StarMapComponent implements OnInit, OnDestroy, AfterViewInit {
     const id = parseInt((<HTMLInputElement>document.getElementById('starIdInput')).value);
   
     try {
-      const response = await fetch(`https://api.anystarregistration.com/getdatas?RegistryNumber=${RegistryNumber}`);
+      const response = await fetch(`http://localhost:3000/getdatas?RegistryNumber=${RegistryNumber}`);
       const data = await response.json();
   
       if (response.ok) {

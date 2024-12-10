@@ -78,6 +78,7 @@ export class BoxComponent {
             this.router.navigate(['/mydetails']);
           } else if (data.message === "login unsucessfully") {
             this.toastr.error("Invalid credentials");
+            this.signInForm.reset();
           } else if (data.message === "Invalid request body") {
             this.toastr.error("Please enter the data");
           }
@@ -99,8 +100,10 @@ export class BoxComponent {
         (data: any) => {
           if (data.message === 'working sucessfully') {
             this.toastr.success("Successfully completed sign up. Please sign in.");
+            this.signUpForm.reset();
           } else if (data.message === "working not sucessfully") {
             this.toastr.error("User details already exist");
+            this.signUpForm.reset();
           } else if (data.message === "Invalid request body") {
             this.toastr.error("Please enter the data");
           }

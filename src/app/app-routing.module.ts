@@ -30,7 +30,6 @@ import { StarMapEntryComponent } from './star-map-entry/star-map-entry.component
 import { StarMapComponent } from './star-map/star-map.component';
 import { MenubarComponent } from './menubar/menubar.component';
 import { PayPaymentComponent } from './pay-payment/pay-payment.component';
-import { GeneralTermsComponent } from './general-terms/general-terms.component';
 import { StraCertificateComponent } from './stra-certificate/stra-certificate.component';
 import { HowManyStarsareInnasadatabaseComponent } from './how-many-starsare-innasadatabase/how-many-starsare-innasadatabase.component';
 import { ZodiacComponent } from './zodiac/zodiac.component';
@@ -38,6 +37,10 @@ import { ContinueShoppingComponent } from './continue-shopping/continue-shopping
 import { authGuard } from './auth.guard';
 import { RefundpolicyComponent } from './refundpolicy/refundpolicy.component';
 import { TermsandconditionComponent } from './termsandcondition/termsandcondition.component';
+import { AboutusComponent } from './aboutus/aboutus.component';
+import { ShippingPolicyComponent } from './shipping-policy/shipping-policy.component';
+import { AddtocartComponent } from './addtocart/addtocart.component';
+import { ProductComponent } from './product/product.component';
 
 
 const routes: Routes = [
@@ -154,7 +157,7 @@ const routes: Routes = [
       path:'paypayment',component:PayPaymentComponent
     },
     {
-      path:'generalterms',component:GeneralTermsComponent
+      path:'shipping-policy',component:ShippingPolicyComponent
     },
     {
       path:'starcertificate',component:StraCertificateComponent
@@ -170,8 +173,18 @@ const routes: Routes = [
     },
     {
       path:'continue-shopping',component:ContinueShoppingComponent
+    },
+    {
+      path:'about-us',component:AboutusComponent
     }
-    
+    ,
+    {
+      path:'cart',component:AddtocartComponent
+    },
+    {
+      path:'product',component:ProductComponent
+    }
+ 
     
 ];
 

@@ -14,7 +14,10 @@ import { BackendServiceService } from '../backend-service.service';
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [FooterComponent,CommonModule,DropdownsComponent,RouterModule,VideoComponent,MiddleComponent,WhystarregComponent,GalleryComponent],
+  imports: [FooterComponent,
+    CommonModule,DropdownsComponent,
+    RouterModule,VideoComponent,MiddleComponent,WhystarregComponent,
+    GalleryComponent],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css'
 })

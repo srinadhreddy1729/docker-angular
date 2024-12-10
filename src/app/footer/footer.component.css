@@ -5,6 +5,8 @@
   -ms-box-sizing:border-box;
   box-sizing:border-box;
 }
+
+
 body{
   font-size:14px;
   background: #fff;
@@ -12,7 +14,7 @@ body{
     margin:0 auto;
   overflow-x:hidden;
   font-family: poppins;
-  
+
 
 }
 #footer{
@@ -30,7 +32,7 @@ body{
   /* padding-top: 5rem; */
   padding-top: 7rem;
     padding-bottom: 80px;
- 
+
 }
 
 .social-links h2{
@@ -50,7 +52,7 @@ body{
   color: #777777;
 }
 .social-icons a{
- 
+
   color: #777777;
 }
 .social-icons a:hover{
